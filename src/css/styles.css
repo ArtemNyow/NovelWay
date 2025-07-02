@@ -19,4 +19,5 @@
 @import url('./partials/article.css');
 @import url('./partials/location.css');
 @import url('./partials/footer.css');
-@import url('./partials/modal.css');
+@import url('./partials/book-modal.css');
+@import url('./partials/contact-modal.css');
