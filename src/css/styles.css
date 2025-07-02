@@ -11,8 +11,12 @@
 @import url('./animations.css');
 
 /* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./partials/header.css');
+@import url('./partials/hero.css');
+@import url('./partials/books.css');
+@import url('./partials/feedbacks.css');
+@import url('./partials/events.css');
+@import url('./partials/article.css');
+@import url('./partials/location.css');
+@import url('./partials/footer.css');
+@import url('./partials/modal.css');
