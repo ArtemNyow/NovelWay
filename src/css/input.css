@@ -1,0 +1,46 @@
+input,
+textarea {
+    border-radius: 4px;
+    padding: 12px;
+    background: rgba(11, 5, 0, 0.05);
+    border: 1px solid rgba(11, 5, 0, 0.6);
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+
+
+/* При фокусі placeholder ховаємо */
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+/* Клас помилки */
+.error {
+    border-color: #ad0000;
+}
+
+/* Повертаємо placeholder видимим при помилці */
+.error::placeholder {
+    opacity: 1;
+    color: #ad0000;
+}
+
+/* Текст помилки (p.error-text) */
+.error-text {
+    color: #ad0000;
+    font-size: 14px;
+    margin-top: 4px;
+    display: none;
+}
+
+/* Показуємо текст помилки коли видимий */
+.error-text.visible {
+    display: block;
+}
