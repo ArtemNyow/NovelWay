@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/js/animations.js"],"sourcesContent":["window.addEventListener('DOMContentLoaded', () => {\n    document.body.classList.add('loaded');\n  });\n  "],"names":[],"mappings":"ssBAAA,OAAO,iBAAiB,mBAAoB,IAAM,CAC9C,SAAS,KAAK,UAAU,IAAI,QAAQ,CACxC,CAAG"}
