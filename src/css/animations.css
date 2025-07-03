@@ -2,17 +2,33 @@
   from {
     transform: translateX(-140%) translateY(-50%);
   }
+
   to {
     transform: translateX(-104%) translateY(-50%);
   }
 }
+
 @keyframes stretch {
   from {
     opacity: 0;
     transform: translateX(-50%) translateY(100%) scale(0.2);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(100%) scale(1);
   }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded {
+  opacity: 1;
 }

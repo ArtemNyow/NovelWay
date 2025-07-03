@@ -1,19 +1,31 @@
 /* Styles for Mobile devices */
 .container {
   min-width: 320px;
-  max-width: 375px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 64px;
 }
+
+/* Гумовий режим між 375px і 768px */
+@media only screen and (min-width: 375px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding: 0 32px;
   }
 }
+
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: 1440px;
+    padding: 0 16px;
   }
 }
