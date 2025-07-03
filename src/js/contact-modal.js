@@ -11,25 +11,33 @@ export function initContactModal() {
     document.body.style.overflow = 'hidden';
   }
 
+  function clearFormErrors() {
+    document.querySelectorAll('.input-wrapper').forEach(wrapper => {
+      wrapper.classList.remove('error');
+      wrapper
+        .querySelectorAll('.error-text-input, .error-text-textarea')
+        .forEach(errorText => errorText.classList.remove('visible'));
+    });
+  }
+
   function closeModal() {
     const modal = document.getElementById('contactModal');
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 
     document.getElementById('contactForm').reset();
-
-    const errorWrappers = document.querySelectorAll('.input-wrapper');
-    errorWrappers.forEach(wrapper => {
-      wrapper.classList.remove('error');
-      wrapper.querySelector('.error-text').classList.remove('visible');
-    });
+    clearFormErrors();
   }
 
   function validateInput(input) {
     const wrapper = input.closest('.input-wrapper');
-    const errorText = wrapper.querySelector('.error-text');
+    const errorText = wrapper.querySelector(
+      '.error-text-input, .error-text-textarea'
+    );
 
-    if (input.required && !input.value) {
+    if (!errorText) return true;
+
+    if (input.required && !input.value.trim()) {
       wrapper.classList.add('error');
       errorText.classList.add('visible');
       return false;
@@ -49,21 +57,24 @@ export function initContactModal() {
     return true;
   }
 
-  // Initialize event listeners
+  // ✅ Modal background close
   document.getElementById('contactModal').addEventListener('click', e => {
     if (e.target === document.getElementById('contactModal')) {
       closeModal();
     }
   });
 
+  // ✅ Escape key close
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeModal();
     }
   });
 
+  // ✅ Close button
   document.getElementById('closeBtn').addEventListener('click', closeModal);
 
+  // ✅ Submit handler
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
 
@@ -92,6 +103,7 @@ export function initContactModal() {
     closeModal();
   });
 
+  // ✅ Input + Blur validation
   document
     .querySelectorAll('.input-wrapper input, .input-wrapper textarea')
     .forEach(input => {
@@ -103,6 +115,6 @@ export function initContactModal() {
       });
     });
 
-  // Make openModal available globally
+  // ✅ Expose openModal
   window.openModal = openModal;
 }

@@ -3,7 +3,7 @@
   <div class="modal-content">
     <!-- Close Button -->
     <button class="close-btn" id="closeBtn">X</button>
-    <h2>Register</h2>
+    <h2 class="modal-title" id="modalTitle">Register</h2>
 
     <!-- Dynamic Event Name -->
     <p class="event-name" id="eventName">
@@ -23,7 +23,7 @@
           placeholder="Enter your name"
           required
         />
-        <div class="error-text">Please enter your name</div>
+        <div class="error-text-input">Please enter your name</div>
       </div>
 
       <div class="input-wrapper">
@@ -36,7 +36,7 @@
           required
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         />
-        <div class="error-text">Please enter a valid email address</div>
+        <div class="error-text-input">Please enter a valid email address</div>
       </div>
 
       <div class="input-wrapper">
@@ -45,11 +45,12 @@
           id="message"
           name="message"
           placeholder="Type your message..."
+          required
         ></textarea>
-        <div class="error-text">Please enter your message</div>
+        <div class="error-text-textarea">Please enter your message</div>
       </div>
 
-      <button class="btn-orange" type="submit">Register</button>
+      <button class="btn-orange register-btn" type="submit">Register</button>
     </form>
   </div>
 </div>

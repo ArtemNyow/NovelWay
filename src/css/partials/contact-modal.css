@@ -5,11 +5,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 64px 16px;
   background-color: rgba(0, 0, 0, 0.25);
   overflow-y: auto;
   justify-content: center;
   align-items: center;
-  padding: 30px;
   display: none;
 }
 
@@ -17,18 +17,18 @@
 .modal-content {
   position: relative;
   background-color: #fceee6;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 64px 16px;
   width: 343px;
-  height: 90vh;
+  height: 794px;
   overflow-y: auto;
-  border-radius: 5px;
   margin: 0 auto;
 }
 
 /* Close button */
 .close-btn {
   position: absolute;
-  top: 12px;
+  top: 16px;
   right: 16px;
   font-size: 28px;
   font-weight: bold;
@@ -44,9 +44,28 @@
   color: #f00;
 }
 
+.modal-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #0b0500;
+}
+
+.event-name {
+  margin-bottom: 48px;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #0b0500;
+}
+
 /* Form Styling */
 .input-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .input-wrapper label {
@@ -55,29 +74,44 @@
   font-weight: 500;
 }
 
-.input-wrapper input,
-.input-wrapper textarea {
+.input-wrapper input {
   width: 100%;
   padding: 10px;
-  margin: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.input-wrapper textarea {
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   transition: border-color 0.2s ease;
 }
 
 .input-wrapper.error input,
 .input-wrapper.error textarea {
-  border-color: #ff0000;
+  border-color: #ad0000;
 }
 
-.error-text {
+.error-text-input {
   display: none;
-  color: #ff0000;
+  color: #ad0000;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
-.error-text.visible {
+.error-text-textarea {
+  display: none;
+  color: #ad0000;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.error-text-input.visible,
+.error-text-textarea.visible {
   display: block;
 }
 
@@ -99,23 +133,6 @@
 #registerBtn2:hover,
 #registerBtn3:hover {
   background-color: #45a049;
-}
-
-/* Submit Button */
-.btn-orange {
-  width: 100%;
-  padding: 12px;
-  background-color: #ff6b35;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.2s ease;
-}
-
-.btn-orange:hover {
-  background-color: #e85a2c;
 }
 
 /* Event Name Styling */
@@ -142,4 +159,15 @@
   .modal {
     padding: 0;
   }
+}
+
+.register-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
