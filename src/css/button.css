@@ -1,0 +1,93 @@
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        opacity 0.25s ease,
+        transform 0.1s ease;
+}
+
+
+.btn-orange {
+    border: 1px solid #e15d05;
+    background: #e15d05;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+    background: #0b0500;
+    border-color: #0b0500;
+}
+
+.btn-orange:active {
+    background: #b44a04;
+    border-color: #b44a04;
+    transform: scale(0.97);
+}
+
+.btn-orange:disabled {
+    cursor: not-allowed;
+    background: #0b0500;
+    opacity: 0.2;
+    transform: none;
+}
+
+.btn-gray {
+    border: 1px solid #0b0500;
+    background: #fceee6;
+    color: #0b0500;
+}
+
+.btn-gray:hover,
+.btn-gray:focus {
+    background: #ea8d50;
+}
+
+.btn-gray:active {
+    background: #dad9d8;
+    transform: scale(0.97);
+}
+
+.btn-gray:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+    transform: none;
+}
+
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: initial;
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    background: #e15d05;
+    fill: #fff;
+}
+
+.arrow-btn:hover,
+.arrow-btn:focus {
+    fill: #000;
+    background: #fceee6;
+}
+
+.arrow-btn:active {
+    fill: #fff;
+    background: #5a2502;
+}
+
+.arrow-btn:disabled {
+    fill: #000;
+    background: #e15d05;
+    opacity: 0.2;
+}
