@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 16px;
 }
 
 /* Гумовий режим між 375px і 768px */
@@ -26,6 +26,6 @@
 @media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
-    padding: 0 16px;
+    padding: 0 64px;
   }
 }
