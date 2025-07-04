@@ -19,17 +19,22 @@
 }
 
 .article-text {
-  font: 400 18px / 1.5 'Rubik', sans-serif;
+  font: 18px / 1.5 'Rubik', sans-serif;
   color: #0b0500;
-  margin: 24px auto 32px;
+  margin-top: 24px;
 }
 
 .article-card {
+  margin-top: 32px;
   display: block;
   border-radius: 16px;
   overflow: hidden;
 }
-
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .article-titel,
   .article-text,
@@ -39,16 +44,10 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
   .container-article {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin: 0 auto;
-    padding: 0 16px;
     gap: 32px;
   }
 
@@ -56,5 +55,8 @@
   .article-text,
   .article-card {
     width: 640px;
+  }
+  .article-card {
+    margin-top: 0;
   }
 }
