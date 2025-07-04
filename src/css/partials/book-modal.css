@@ -1,0 +1,113 @@
+.backdrop {
+  padding: 32px 16px;
+  width: 375px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.book-modal {
+  width: 343px;
+  height: auto;
+  border-radius: 16px;
+  padding: 64px 16px;
+  position: relative;
+  background-color: #fceee6;
+}
+
+.btn-icon-close {
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.book-modal-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.book-modal-text {
+  font-size: 14px;
+  color: #0b0500;
+  margin-bottom: 8px;
+}
+
+.book-modal-price {
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+  margin-bottom: 24px;
+}
+
+.form-book-quantity {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-icon {
+  border: 1px solid #0b0500;
+  padding: 8px 12px;
+  width: 32px;
+  height: 40px;
+  font-size: 16px;
+  color: #0b0500;
+  background-color: inherit;
+}
+
+.form-input-sum {
+  border-radius: 8px;
+  width: 42px;
+  height: 40px;
+}
+
+.form-btn-book-modal {
+  display: block;
+  margin: 0 auto;
+  padding: 12px auto;
+  width: 311px;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.form-btn-book-modal:last-child {
+  margin-bottom: 32px;
+}
+
+.btn-icon-down {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+}
+
+.book-modal-list-item {
+  border-top: 1px solid rgba(11, 5, 0, 0.15);
+}
+
+.book-modal-list-item:last-child {
+  border-bottom: 1px solid rgba(11, 5, 0, 0.15);
+}
+
+.book-modal-title-down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.book-modal-item-text {
+  color: #0b0500;
+  margin-bottom: 24px;
+}
+
+.book-modal-item-text:last-child {
+  margin-bottom: 24px;
+}
