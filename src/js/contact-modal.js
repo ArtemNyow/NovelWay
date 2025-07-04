@@ -57,24 +57,24 @@ export function initContactModal() {
     return true;
   }
 
-  // ✅ Modal background close
+  // Modal background close
   document.getElementById('contactModal').addEventListener('click', e => {
     if (e.target === document.getElementById('contactModal')) {
       closeModal();
     }
   });
 
-  // ✅ Escape key close
+  // Escape key close
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeModal();
     }
   });
 
-  // ✅ Close button
+  // Close button
   document.getElementById('closeBtn').addEventListener('click', closeModal);
 
-  // ✅ Submit handler
+  // Submit handler
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
 
@@ -103,7 +103,7 @@ export function initContactModal() {
     closeModal();
   });
 
-  // ✅ Input + Blur validation
+  // Input + Blur validation
   document
     .querySelectorAll('.input-wrapper input, .input-wrapper textarea')
     .forEach(input => {
@@ -115,6 +115,6 @@ export function initContactModal() {
       });
     });
 
-  // ✅ Expose openModal
+  // Expose openModal
   window.openModal = openModal;
 }
