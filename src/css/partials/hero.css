@@ -66,6 +66,11 @@
   text-align: center;
 }
 
+a .banner-btn:hover,
+a .banner-btn:focus {
+  opacity: 1;
+}
+
 .hero-title {
   font-weight: 600;
   font-size: 40px;
