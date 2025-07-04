@@ -40,14 +40,14 @@
   .article-text,
   .article-card {
     width: 704px;
-    max-width: none;
+    max-width: inherit;
   }
 }
 @media screen and (min-width: 1440px) {
   .container-article {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 32px;
   }
 
