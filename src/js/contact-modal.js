@@ -1,4 +1,4 @@
-export function initContactModal() {
+function initContactModal() {
   function openModal(eventName, eventId) {
     const modal = document.getElementById('contactModal');
     const eventTitleSpan = document.getElementById('eventTitle');
@@ -118,3 +118,5 @@ export function initContactModal() {
   // Expose openModal
   window.openModal = openModal;
 }
+
+initContactModal();

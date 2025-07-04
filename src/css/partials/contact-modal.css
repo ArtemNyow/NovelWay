@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 9999;
 }
 
 /* Modal content */
@@ -30,9 +31,8 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  font-size: 28px;
   font-weight: bold;
-  color: #000;
+  color: 0B0500;
   cursor: pointer;
   transition: color 0.2s ease;
   background: none;
