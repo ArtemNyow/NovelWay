@@ -120,7 +120,6 @@
     .location-container {
         gap: 80px;
         width: 1312px;
-        margin-left: 50px;
     }
 
     .location-text {
@@ -131,4 +130,3 @@
         min-width: 732px;
     }
 }
-
