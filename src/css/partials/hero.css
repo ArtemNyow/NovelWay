@@ -233,10 +233,6 @@ a .banner-btn:focus {
     display: none;
     content: none;
   }
-
-  .slider-controls .icon-arrow {
-    fill: #0b0500;
-  }
 }
 
 @media screen and (min-width: 1440px) {
