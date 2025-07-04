@@ -115,7 +115,6 @@
           <li class="swiper-slide banner-slide banner1">
             <h2 class="banner-title">Get 10% off <br />your first order</h2>
             <a class="banner-btn btn-orange" href="#books">Shop now!</a>
-            <!-- <section class="section books-section" id="books"> -->
           </li>
           <li class="swiper-slide banner-slide banner2">
             <h2 class="banner-title">Save 15% on <br />some books</h2>
@@ -158,60 +157,85 @@
 
       
       
-      <section class="events">
-    <div class="events-text-container">
-        <h3 class="events-text-container-prevtitle">Events</h3>
-        <h2 class="events-text-container-title">Upcoming Events at Booksy</h2>
-        <p class="events-text-container-text">
-            Discover readings, workshops, and bookish gatherings — online and offline. Everyone’s welcome.
+      <!-- <section class="events">
+  <div class="events-text-container">
+    <h3 class="events-text-container-prevtitle">Events</h3>
+    <h2 class="events-text-container-title">Upcoming Events at Booksy</h2>
+    <p class="events-text-container-text">
+      Discover readings, workshops, and bookish gatherings — online and offline.
+      Everyone’s welcome.
+    </p>
+  </div>
+  <div class="swiper">
+    <ul class="events-list swiper-wrapper">
+      <li class="events-list-item swiper-slide">
+        <img class="events-list-item-img" src="" alt="Cozy Book Club" />
+        <p class="events-list-item-format">In-store</p>
+        <p class="events-list-item-date">June 5, 6:30 PM</p>
+        <h2 class="events-list-item-title">
+          Cozy Book Club — “The Midnight Library”
+        </h2>
+        <p class="events-list-item-text">
+          Join us for an evening of tea, thoughtful conversation, and shared
+          reflections as we dive into Matt Haig’s bestseller.
         </p>
-    </div>
-    <div class="swiper">
-        <ul class="events-list swiper-wrapper">
-            <li class="events-list-item swiper-slide">
-                <img class="events-list-item-img" src="" alt="Cozy Book Club">
-                <p class="events-list-item-format">In-store</p>
-                <p class="events-list-item-date">June 5, 6:30 PM</p>
-                <h2 class="events-list-item-title">Cozy Book Club — “The Midnight Library”</h2>
-                <p class="events-list-item-text">
-                    Join us for an evening of tea, thoughtful conversation, and shared reflections as we dive into Matt
-                    Haig’s bestseller.
-                </p>
-                <button id="registerBtn1" class="events-list-item-btn" onclick="openModal('Cozy Book Club — “The Midnight Library”', 'event1')">Register</button>
-            </li>
-            <li class="events-list-item swiper-slide">
-                <img class="events-list-item-img" src="" alt="Book Cover Design Workshop">
-                <p class="events-list-item-format">Online</p>
-                <p class="events-list-item-date">June 12, 7:00 PM</p>
-                <h2 class="events-list-item-title">Book Cover Design Workshop</h2>
-                <p class="events-list-item-text">
-                    A hands-on session for aspiring designers and curious readers. Learn what makes a cover stand out —
-                    from concept to print.
-                </p>
-                <button id="registerBtn2" class="events-list-item-btn" onclick="openModal('Book Cover Design Workshop', 'event2')">Register</button>
-            </li>
-            <li class="events-list-item swiper-slide">
-                <img class="events-list-item-img" src="" alt="Children’s Story Hour">
-                <p class="events-list-item-format">In-store | June 15, 11:00 AM</p>
-                <p class="events-list-item-date"></p>
-                <h2 class="events-list-item-title">Children’s Story Hour</h2>
-                <p class="events-list-item-text">
-                    A magical morning of stories, games, and imagination for our youngest book lovers (ages 4–8).
-                </p>
-                <button id="registerBtn3" class="events-list-item-btn" onclick="openModal('Children’s Story Hour', 'event3')">Register</button>
-            </li>
-        </ul>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <button
+          id="registerBtn1"
+          class="events-list-item-btn"
+          onclick="openModal('Cozy Book Club — “The Midnight Library”', 'event1')"
+        >
+          Register
+        </button>
+      </li>
+      <li class="events-list-item swiper-slide">
+        <img
+          class="events-list-item-img"
+          src=""
+          alt="Book Cover Design Workshop"
+        />
+        <p class="events-list-item-format">Online</p>
+        <p class="events-list-item-date">June 12, 7:00 PM</p>
+        <h2 class="events-list-item-title">Book Cover Design Workshop</h2>
+        <p class="events-list-item-text">
+          A hands-on session for aspiring designers and curious readers. Learn
+          what makes a cover stand out — from concept to print.
+        </p>
+        <button
+          id="registerBtn2"
+          class="events-list-item-btn"
+          onclick="openModal('Book Cover Design Workshop', 'event2')"
+        >
+          Register
+        </button>
+      </li>
+      <li class="events-list-item swiper-slide">
+        <img class="events-list-item-img" src="" alt="Children’s Story Hour" />
+        <p class="events-list-item-format">In-store | June 15, 11:00 AM</p>
+        <p class="events-list-item-date"></p>
+        <h2 class="events-list-item-title">Children’s Story Hour</h2>
+        <p class="events-list-item-text">
+          A magical morning of stories, games, and imagination for our youngest
+          book lovers (ages 4–8).
+        </p>
+        <button
+          id="registerBtn3"
+          class="events-list-item-btn"
+          onclick="openModal('Children’s Story Hour', 'event3')"
+        >
+          Register
+        </button>
+      </li>
+    </ul>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev arrow-btn "></div>
-        <div class="swiper-button-next arrow-btn "></div>
+    <div class="swiper-pagination"></div>
 
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div>
-</section>
+    <div class="swiper-button-prev arrow-btn"></div>
+    <div class="swiper-button-next arrow-btn"></div>
+
+    <div class="swiper-scrollbar"></div>
+  </div>
+</section> -->
+
       <section class="article">
   <div class="container container-article">
     <div class="paragraph">
