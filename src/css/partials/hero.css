@@ -1,12 +1,3 @@
-@media screen and (max-width: 375px) {
-  .container {
-    max-width: 100%;
-  }
-  .hero-title {
-    max-width: 100%;
-  }
-}
-
 .hero-section {
   padding-bottom: 32px;
 }
@@ -28,7 +19,6 @@
 .swiper-slide {
   flex-shrink: 0;
   width: 100%;
-  height: 400px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -36,7 +26,7 @@
 
 .banner-slide {
   border-radius: 8px;
-  width: 343px;
+  width: 100%;
   height: 199px;
 
   padding-top: 90px;
@@ -84,7 +74,7 @@
   letter-spacing: -0.01em;
   color: #0b0500;
   text-transform: capitalize;
-  width: 343px;
+  width: 100%;
 }
 
 .slider-controls {
@@ -92,31 +82,56 @@
 }
 
 .banner1 {
-  background-image: image-set(
-    url('../img/hero/hero-banner1-mobile.jpg') 1x,
-    url('../img/hero/hero-banner1-mobile@2x.jpg') 2x
-  );
+  background-image: url('../img/hero/hero-banner1-mobile.jpg');
 }
 
 .banner2 {
-  background-image: image-set(
-    url('../img/hero/hero-banner2-mobile.jpg') 1x,
-    url('../img/hero/hero-banner2-mobile@2x.jpg') 2x
-  );
+  background-image: url('../img/hero/hero-banner2-mobile.jpg');
 }
 
 .banner3 {
-  background-image: image-set(
-    url('../img/hero/hero-banner3-mobile.jpg') 1x,
-    url('../img/hero/hero-banner3-mobile@2x.jpg') 2x
-  );
+  background-image: url('../img/hero/hero-banner3-mobile.jpg');
 }
 
 .banner4 {
-  background-image: image-set(
-    url('../img/hero/hero-banner4-mobile.jpg') 1x,
-    url('../img/hero/hero-banner4-mobile@2x.jpg') 2x
-  );
+  background-image: url('../img/hero/hero-banner4-mobile.jpg');
+}
+
+@media screen and (min-width: 375px) {
+  .hero-title {
+    width: 343px;
+  }
+
+  .banner-slide {
+    width: 343px;
+  }
+  .banner1 {
+    background-image: image-set(
+      url('../img/hero/hero-banner1-mobile.jpg') 1x,
+      url('../img/hero/hero-banner1-mobile@2x.jpg') 2x
+    );
+  }
+
+  .banner2 {
+    background-image: image-set(
+      url('../img/hero/hero-banner2-mobile.jpg') 1x,
+      url('../img/hero/hero-banner2-mobile@2x.jpg') 2x
+    );
+  }
+
+  .banner3 {
+    background-image: image-set(
+      url('../img/hero/hero-banner3-mobile.jpg') 1x,
+      url('../img/hero/hero-banner3-mobile@2x.jpg') 2x
+    );
+  }
+
+  .banner4 {
+    background-image: image-set(
+      url('../img/hero/hero-banner4-mobile.jpg') 1x,
+      url('../img/hero/hero-banner4-mobile@2x.jpg') 2x
+    );
+  }
 }
 
 @media screen and (min-width: 768px) {
