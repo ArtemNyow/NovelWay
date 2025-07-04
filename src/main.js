@@ -1,9 +1,4 @@
-import './js/animations'
-import { initContactModal } from './js/contact-modal.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  initContactModal();
-
-
-});
+import './js/animations';
+import './js/contact-modal';
+import './js/hero';
+import './js/header';
