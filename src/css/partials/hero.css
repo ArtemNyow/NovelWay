@@ -52,12 +52,11 @@
 
 .banner-btn {
   display: block;
-  border: 0.52px solid #e15d05;
+
   border-radius: 2px;
   padding: 4px 10px;
   width: 117px;
   height: 20px;
-  background-color: #e15d05;
 
   font-weight: 400;
   font-size: 8px;
@@ -98,13 +97,10 @@
 }
 
 @media screen and (min-width: 375px) {
-  .hero-title {
+  .hero-container {
     width: 343px;
   }
 
-  .banner-slide {
-    width: 343px;
-  }
   .banner1 {
     background-image: image-set(
       url('../img/hero/hero-banner1-mobile.jpg') 1x,
@@ -135,6 +131,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .hero-container {
+    width: 768px;
+  }
+
   .banner-slide {
     border-radius: 11px;
     width: 704px;
@@ -153,7 +153,6 @@
   }
 
   .banner-btn {
-    border: 1px solid #e15d05;
     border-radius: 4px;
     padding: 4px 20px;
     width: 164px;
@@ -212,27 +211,22 @@
 
   .slider-controls .swiper-button-prev,
   .slider-controls .swiper-button-next {
-    background-color: #e15d05 !important;
-    border: 1px solid rgba(11, 5, 0, 0.15);
     width: 48px;
     height: 48px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    margin-top: 0 !important;
+
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 0;
   }
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
-    display: none !important;
-    content: none !important;
+    display: none;
+    content: none;
   }
 
   .slider-controls .icon-arrow {
@@ -241,6 +235,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .hero-container {
+    width: 1440px;
+  }
+
   .banner-slide {
     border-radius: 16px;
     width: 1312px;
