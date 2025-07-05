@@ -1,20 +1,22 @@
-<!-- Modal Structure -->
+<!-- Завдання: Модальне вікно повинно містити назву події, на яку відбувається реєстрація, та кнопку закриття -->
 <div class="modal" id="contactModal">
   <div class="modal-content">
-    <!-- Close Button -->
+    <!-- Завдання: Кнопка закриття повинна бути іконкою -->
     <button class="close-btn" id="closeBtn">
       <svg width="14" height="14">
         <use href="img/sprite.svg#icon-close-btn"></use>
       </svg>
     </button>
+
+    <!-- Завдання:Текст "Register" є заголовком модального вікна -->
     <h2 class="modal-title" id="modalTitle">Register</h2>
 
-    <!-- Dynamic Event Name -->
+    <!-- Динамічна назва події -->
     <p class="event-name" id="eventName">
       <span id="eventTitle"></span>
     </p>
 
-    <!-- Contact Form -->
+    <!-- Завдання: Форма повинна містити обов'язкові поля для імені та електронної пошти, а також поле для повідомлення -->
     <form id="contactForm">
       <input type="hidden" id="eventId" name="eventId" />
 
@@ -54,6 +56,7 @@
         <div class="error-text-textarea">Please enter your message</div>
       </div>
 
+      <!-- Завдання: Форма повинна містити кнопку "Register" з типом submit -->
       <button class="btn-orange register-btn" type="submit">Register</button>
     </form>
   </div>

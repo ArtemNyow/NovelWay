@@ -1,38 +1,65 @@
-/* Modal background */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Модальне вікно */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 64px 16px;
   background-color: rgba(0, 0, 0, 0.25);
-  overflow-y: auto;
+  display: none;
   justify-content: center;
   align-items: center;
-  display: none;
   z-index: 9999;
 }
 
-/* Modal content */
 .modal-content {
   position: relative;
   background-color: #fceee6;
   border-radius: 16px;
   padding: 64px 16px;
-  width: 343px;
-  height: 794px;
+  width: 100%;
+  max-width: 343px;
+  min-height: calc(100vh - 128px);
+  min-height: min-content;
   overflow-y: auto;
   margin: 0 auto;
 }
 
-/* Close button */
+/* Типографіка */
+.modal-title,
+.event-name {
+  text-align: center;
+  color: #0b0500;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.modal-title {
+  margin-bottom: 16px;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.event-name {
+  margin-bottom: 48px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+/* Управління */
 .close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
   font-weight: bold;
-  color: 0B0500;
+  color: #0b0500;
   cursor: pointer;
   transition: color 0.2s ease;
   background: none;
@@ -40,30 +67,7 @@
   padding: 0;
 }
 
-.close-btn:hover {
-  color: #f00;
-}
-
-.modal-title {
-  margin-bottom: 16px;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #0b0500;
-}
-
-.event-name {
-  margin-bottom: 48px;
-  font-size: 24px;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #0b0500;
-}
-
-/* Form Styling */
+/* Форма */
 .input-wrapper {
   margin-bottom: 24px;
 }
@@ -74,40 +78,50 @@
   font-weight: 500;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(11, 5, 0, 0.6);
+  border-radius: 4px;
   transition: border-color 0.2s ease;
 }
 
 .input-wrapper textarea {
-  width: 100%;
   height: 180px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.2s ease;
 }
 
+/* Плейсхолдери */
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  color: rgba(11, 5, 0, 0.6);
+  transition: color 0.2s ease;
+}
+
+/* Стани помилки */
 .input-wrapper.error input,
 .input-wrapper.error textarea {
   border-color: #ad0000;
 }
 
-.error-text-input {
-  display: none;
+.input-wrapper.error input::placeholder,
+.input-wrapper.error textarea::placeholder {
   color: #ad0000;
-  font-size: 12px;
-  margin-top: 4px;
 }
 
+.error-text-input,
 .error-text-textarea {
   display: none;
   color: #ad0000;
-  font-size: 16px;
   margin-top: 4px;
+}
+
+.error-text-input {
+  font-size: 12px;
+}
+
+.error-text-textarea {
+  font-size: 16px;
 }
 
 .error-text-input.visible,
@@ -115,52 +129,7 @@
   display: block;
 }
 
-/* Register Buttons */
-#registerBtn1,
-#registerBtn2,
-#registerBtn3 {
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.2s ease;
-}
-
-#registerBtn1:hover,
-#registerBtn2:hover,
-#registerBtn3:hover {
-  background-color: #45a049;
-}
-
-/* Event Name Styling */
-.event-name {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Form Header */
-.modal-content h2 {
-  margin-bottom: 15px;
-  color: #333;
-}
-
-/* Responsive adjustments */
-@media (max-width: 400px) {
-  .modal-content {
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
-  }
-
-  .modal {
-    padding: 0;
-  }
-}
-
+/* Кнопка */
 .register-btn {
   display: block;
   width: 100%;
@@ -170,4 +139,58 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Переломи */
+@media only screen and (max-width: 375px) {
+  .modal {
+    padding: 16px 8px;
+  }
+
+  .modal-content {
+    padding: 24px 12px;
+    max-width: 304px;
+    max-height: calc(100vh - 32px);
+  }
+
+  .event-name {
+    margin-bottom: 32px;
+  }
+
+  .input-wrapper {
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    padding: 64px 32px;
+  }
+
+  .modal-content {
+    max-width: 704px;
+    max-height: calc(100vh - 128px);
+    padding: 64px 32px;
+  }
+
+  .register-btn {
+    max-width: 324px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .modal {
+    padding: 64px 287px;
+  }
+
+  .modal-content {
+    max-width: 866px;
+    padding: 64px;
+  }
+
+  .register-btn {
+    max-width: 342px;
+    margin: 0 auto;
+  }
 }
