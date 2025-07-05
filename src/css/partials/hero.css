@@ -103,7 +103,7 @@ a .banner-btn:focus {
 
 @media screen and (min-width: 375px) {
   .hero-container {
-    width: 343px;
+    width: 375px;
   }
 
   .banner1 {
