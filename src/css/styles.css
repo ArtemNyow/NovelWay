@@ -16,6 +16,7 @@
 
 /* Sections style */
 @import url('./partials/header.css');
+@import url('./partials/header-modal.css');
 @import url('./partials/hero.css');
 @import url('./partials/books.css');
 @import url('./partials/feedbacks.css');
