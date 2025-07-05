@@ -3,6 +3,8 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const prevBtn = document.querySelector('.swiper-button-prev');
+const nextBtn = document.querySelector('.swiper-button-next');
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation],
@@ -20,10 +22,6 @@ const swiper = new Swiper('.swiper', {
 
 
 function updateButtonsState(swiper) {
-  const prevBtn = document.querySelector('.swiper-button-prev');
-  const nextBtn = document.querySelector('.swiper-button-next');
-
-
   if (swiper.isBeginning) {
     prevBtn.disabled = true;
     prevBtn.classList.add('disabled');

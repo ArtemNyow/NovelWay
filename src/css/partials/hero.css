@@ -5,11 +5,14 @@
 .banner-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
+
+  margin-bottom: 24px;
 }
 
 .swiper {
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -25,10 +28,8 @@
 }
 
 .banner-slide {
-  border-radius: 8px;
   width: 100%;
   height: 199px;
-
   padding-top: 90px;
   padding-left: 16px;
   padding-bottom: 16px;
@@ -36,8 +37,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  margin-bottom: 24px;
 }
 
 .banner-title {
@@ -81,8 +80,24 @@ a .banner-btn:focus {
   width: 100%;
 }
 
-.slider-controls {
+.slider-controls .swiper-button-prev,
+.slider-controls .swiper-button-next {
+  width: 48px;
+  height: 48px;
+
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+  margin-top: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
   display: none;
+  content: none;
 }
 
 .banner1 {
@@ -107,23 +122,52 @@ a .banner-btn:focus {
   }
 
   .banner1 {
-    background-image: image-set(url('/img/hero/hero-banner1-mobile.jpg') 1x,
-        url('/img/hero/hero-banner1-mobile@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner1-mobile.jpg') 1x,
+      url('/img/hero/hero-banner1-mobile@2x.jpg') 2x
+    );
   }
 
   .banner2 {
-    background-image: image-set(url('/img/hero/hero-banner2-mobile.jpg') 1x,
-        url('/img/hero/hero-banner2-mobile@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner2-mobile.jpg') 1x,
+      url('/img/hero/hero-banner2-mobile@2x.jpg') 2x
+    );
   }
 
   .banner3 {
-    background-image: image-set(url('/img/hero/hero-banner3-mobile.jpg') 1x,
-        url('/img/hero/hero-banner3-mobile@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner3-mobile.jpg') 1x,
+      url('/img/hero/hero-banner3-mobile@2x.jpg') 2x
+    );
   }
 
   .banner4 {
-    background-image: image-set(url('/img/hero/hero-banner4-mobile.jpg') 1x,
-        url('/img/hero/hero-banner4-mobile@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner4-mobile.jpg') 1x,
+      url('/img/hero/hero-banner4-mobile@2x.jpg') 2x
+    );
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hero-title {
+    width: 343px;
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-left: auto;
   }
 }
 
@@ -132,16 +176,17 @@ a .banner-btn:focus {
     width: 768px;
   }
 
-  .banner-slide {
+  .swiper {
     border-radius: 11px;
+  }
+
+  .banner-slide {
     width: 704px;
     height: 274px;
 
     padding-top: 118px;
     padding-left: 40px;
     padding-bottom: 32px;
-
-    margin-bottom: 24px;
   }
 
   .banner-title {
@@ -159,63 +204,45 @@ a .banner-btn:focus {
   }
 
   .banner1 {
-    background-image: image-set(url('/img/hero/hero-banner1-tablet.jpg') 1x,
-        url('/img/hero/hero-banner1-tablet@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner1-tablet.jpg') 1x,
+      url('/img/hero/hero-banner1-tablet@2x.jpg') 2x
+    );
   }
 
   .banner2 {
-    background-image: image-set(url('/img/hero/hero-banner2-tablet.jpg') 1x,
-        url('/img/hero/hero-banner2-tablet@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner2-tablet.jpg') 1x,
+      url('/img/hero/hero-banner2-tablet@2x.jpg') 2x
+    );
   }
 
   .banner3 {
-    background-image: image-set(url('/img/hero/hero-banner3-tablet.jpg') 1x,
-        url('/img/hero/hero-banner3-tablet@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner3-tablet.jpg') 1x,
+      url('/img/hero/hero-banner3-tablet@2x.jpg') 2x
+    );
   }
 
   .banner4 {
-    background-image: image-set(url('/img/hero/hero-banner4-tablet.jpg') 1x,
-        url('/img/hero/hero-banner4-tablet@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner4-tablet.jpg') 1x,
+      url('/img/hero/hero-banner4-tablet@2x.jpg') 2x
+    );
   }
 
   .title-container {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .hero-title {
     width: 560px;
+    order: 1;
   }
 
   .slider-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    order: 2;
     gap: 24px;
-    margin-left: auto;
-  }
-
-  .slider-controls .swiper-button-prev,
-  .slider-controls .swiper-button-next {
-    width: 48px;
-    height: 48px;
-
-    position: static;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin-top: 0;
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    display: none;
-    content: none;
   }
 }
 
@@ -224,8 +251,11 @@ a .banner-btn:focus {
     width: 1440px;
   }
 
-  .banner-slide {
+  .swiper {
     border-radius: 16px;
+  }
+
+  .banner-slide {
     width: 1312px;
     height: 395px;
 
@@ -246,23 +276,31 @@ a .banner-btn:focus {
   }
 
   .banner1 {
-    background-image: image-set(url('/img/hero/hero-banner1-desktop.jpg') 1x,
-        url('/img/hero/hero-banner1-desktop@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner1-desktop.jpg') 1x,
+      url('/img/hero/hero-banner1-desktop@2x.jpg') 2x
+    );
   }
 
   .banner2 {
-    background-image: image-set(url('/img/hero/hero-banner2-desktop.jpg') 1x,
-        url('/img/hero/hero-banner2-desktop@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner2-desktop.jpg') 1x,
+      url('/img/hero/hero-banner2-desktop@2x.jpg') 2x
+    );
   }
 
   .banner3 {
-    background-image: image-set(url('/img/hero/hero-banner3-desktop.jpg') 1x,
-        url('/img/hero/hero-banner3-desktop@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner3-desktop.jpg') 1x,
+      url('/img/hero/hero-banner3-desktop@2x.jpg') 2x
+    );
   }
 
   .banner4 {
-    background-image: image-set(url('/img/hero/hero-banner4-desktop.jpg') 1x,
-        url('/img/hero/hero-banner4-desktop@2x.jpg') 2x);
+    background-image: image-set(
+      url('/img/hero/hero-banner4-desktop.jpg') 1x,
+      url('/img/hero/hero-banner4-desktop@2x.jpg') 2x
+    );
   }
 
   .hero-title {
