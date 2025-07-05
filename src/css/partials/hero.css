@@ -5,7 +5,6 @@
 .banner-container {
   position: relative;
   width: 100%;
-  overflow: hidden;
 
   margin-bottom: 24px;
 }
@@ -81,10 +80,6 @@ a .banner-btn:focus {
   width: 100%;
 }
 
-.slider-controls {
-  display: none;
-}
-
 .slider-controls .swiper-button-prev,
 .slider-controls .swiper-button-next {
   width: 48px;
@@ -153,6 +148,27 @@ a .banner-btn:focus {
       url('/img/hero/hero-banner4-mobile@2x.jpg') 2x
     );
   }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .hero-title {
+    width: 343px;
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -162,7 +178,6 @@ a .banner-btn:focus {
 
   .swiper {
     border-radius: 11px;
-    overflow: hidden;
   }
 
   .banner-slide {
@@ -217,43 +232,17 @@ a .banner-btn:focus {
   }
 
   .title-container {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .hero-title {
     width: 560px;
+    order: 1;
   }
 
   .slider-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    order: 2;
     gap: 24px;
-    margin-left: auto;
-  }
-
-  .slider-controls .swiper-button-prev,
-  .slider-controls .swiper-button-next {
-    width: 48px;
-    height: 48px;
-
-    position: static;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin-top: 0;
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    display: none;
-    content: none;
   }
 }
 
@@ -264,7 +253,6 @@ a .banner-btn:focus {
 
   .swiper {
     border-radius: 16px;
-    overflow: hidden;
   }
 
   .banner-slide {
