@@ -1,0 +1,75 @@
+.mobile-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #fff;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-menu:not(.is-open) .mobile-menu-container {
+  transform: translate(-50%, -100%) scale(1.5);
+}
+.mobile-menu-container {
+  position: relative;
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fceee6;
+  margin: 0 auto;
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 26.34px;
+  right: 30.39px;
+  width: 12px;
+  height: 12px;
+  border: none;
+  padding: 0;
+}
+.js-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.mobile-menu-logo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  padding-left: 20px;
+}
+.js-header-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font: 500 20px / 1.5 'Rubik', sans-serif;
+  color: #0b0500;
+}
+
+.burger-btn:hover,
+.burger-btn:focus,
+.close-btn:hover,
+.close-btn:focus {
+  opacity: 0.2;
+  transition: opacity 250ms ease-in-out;
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
