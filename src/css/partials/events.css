@@ -31,26 +31,45 @@
     color: #0b0500;
 }
 
-.swiper {}
+.swiper {
+    /* width: 100%;
+    max-width: 1200px;
+    margin: auto; */
+}
 
 .events-list {
-    display: flex;
-    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 56px;
 }
 
 .swiper-wrapper {}
 
 .events-list-item {
-    /* width: 342px;
-    height: 545px; */
-    width: 100%;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
+    width: 100%; 
 }
 
-.swiper-slide {}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-.events-list-item-img {}
+.events-list-item-img {
+    width: 342px;
+    height: 277px;
+}
+
+.events-list-item-text-container{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: space-between;
+ height: 220px;
+}
+
+.events-list-item-text-container-text {
+
+}
 
 .events-list-item-format {
     font-weight: 400;
@@ -90,15 +109,77 @@
     color: #0b0500;
     border: none;
     background-color: transparent;
-    padding: 0;
+    /* padding: 0; */
+    fill: #0b0500;
+    padding-left: 0;
+}
+
+.button-icon{
+    fill: #0b0500;
+    width: 24px;
+    height: 24px;
+    overflow: visible;
+        /* Усуньте hidden */
+        display: block;
+        color: inherit;
 }
 
 .swiper-pagination {}
 
-.swiper-button-prev {}
+.swiper-button-prev {
+    background-image: url('/src/img/sprite.svg#icon-left-arrow-alt');
+    fill: #0b0500;
+}
 
 .arrow-btn {}
 
-.swiper-button-next {}
+.swiper-button-next {
+    background-image: url('/src/img/sprite.svg#icon-right-arrow-alt');
+}
 
-.swiper-scrollbar {}
+@media screen and (min-width: 374px){
+    .events-container{
+        max-width: 343px;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    .events-container {
+        max-width: 704px;
+    }
+
+    .events-list{
+        margin-bottom: 32px;
+    }
+
+    .events-list-item-img {
+        width: 340px;   
+    }
+
+    .events-text-container-text {
+        width: 560px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .events-container {
+            max-width: 1312px;
+    }
+
+    .events-list-item-img {
+        width: 421px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: none;     
+    }
+
+
+
+}
