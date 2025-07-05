@@ -37,12 +37,8 @@
 }
 
 .footer-btn-form {
-    border: 1px solid #0b0500;
-    border-radius: 4px;
     width: 106px;
-    height: 48px;
     background-color: #ea8d50;
-    color: #0b0500;
 }
 
 .footer-input-text {
@@ -95,7 +91,7 @@
 
     .decor-line {
         width: 640px;
-     }
+    }
 
     .footer-form {
         justify-content: center;
@@ -140,7 +136,7 @@
         justify-content: end;
         white-space: nowrap;
     }
-        
+
     .footer-title {
         display: flex;
         justify-content: end;
