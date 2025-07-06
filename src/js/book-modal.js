@@ -12,6 +12,9 @@ const plus = document.querySelector('.plus');
 const formBookModal = document.querySelector('.form-book-modal');
 const addToCartBtn = document.querySelector('.add-to-cart');
 const buyNowBtn = document.querySelector('.buy-now');
+const accordion = document.querySelector('.accordion-container');
+
+new Accordion('.accordion-container');
 
 inputSum.value = 1;
 
@@ -38,14 +41,14 @@ minus.addEventListener('click', minusBtn);
 
 function minusBtn(event) {
   if (inputSum.value > 1) {
-    inputSum.value = Number(inputSum.value) - 1;
+    inputSum.value = +inputSum.value - 1;
   }
 }
 
 plus.addEventListener('click', plusBtn);
 
 function plusBtn(event) {
-  inputSum.value = Number(inputSum.value) + 1;
+  inputSum.value = +inputSum.value + 1;
 }
 
 addToCartBtn.addEventListener('click', addToCart);

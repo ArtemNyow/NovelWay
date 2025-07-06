@@ -117,32 +117,60 @@
   padding: 0;
 }
 
-.book-modal-list {
+.accordion-container {
   max-width: 311px;
   width: 100%;
 }
 
-.book-modal-list-item {
-  border-top: 1px solid rgba(11, 5, 0, 0.15);
+.ac {
+  background-color: inherit !important;
 }
 
-.book-modal-list-item:last-child {
+.ac-item {
+  border-top: 1px solid rgba(11, 5, 0, 0.15) !important;
+}
+
+.ac:last-child {
   border-bottom: 1px solid rgba(11, 5, 0, 0.15);
 }
 
 .book-modal-title-down {
+}
+
+.book-modal-item-title {
+}
+
+.ac-trigger {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0b0500;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
+  max-width: 311px;
+  width: 100%;
+  height: 59px;
 }
 
-.book-modal-item-title {
-  font-weight: 600;
-  font-size: 18px;
-  color: #0b0500;
+.ac .ac-trigger::after {
+  display: none !important;
 }
+
+.ac-trigger .icon-down {
+  position: absolute;
+  right: 0;
+}
+
+.icon-up-hidden {
+  display: none;
+}
+
+/* .icon-down-hidden {
+  display: none;
+} */
 
 .book-modal-item-text {
   color: #0b0500;
@@ -198,7 +226,12 @@
     margin-bottom: 24px;
   }
 
-  .book-modal-list {
+  .accordion-container {
+    max-width: 307px;
+    width: 100%;
+  }
+
+  .ac-trigger {
     max-width: 307px;
     width: 100%;
   }
@@ -235,7 +268,12 @@
     margin-right: 24px;
   }
 
-  .book-modal-list {
+  .accordion-container {
+    max-width: 759px;
+    width: 100%;
+  }
+
+  .ac-trigger {
     max-width: 759px;
     width: 100%;
   }
