@@ -8,16 +8,19 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
     padding-bottom: 24px;
+    color: #0b0500;
 }
 
 .user-feedback-subtitle {
     font-size: 18px;
     line-height: 1.5;
     padding-bottom: 80px;
+    color: #0b0500;
 }
 
 .user-feedback-swiper {
     padding-bottom: 32px;
+    overflow: hidden;
 }
 
 .user-feedback-list {
@@ -25,6 +28,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    padding-bottom: 32px;
 }
 
 .swiper-slide {
@@ -34,16 +38,18 @@
 .user-feedback-item {
     border: 1px solid rgba(11, 5, 0, 0.15);
     border-radius: 16px;
-    width: 341px;
+    width: calc((100% - 24) / 1);
     height: 314px;
-    padding: 32px 32px 107px 32px;
+    padding: 32px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .user-feedback-item-title {
     font-size: 18px;
     line-height: 1.5;
     padding-bottom: 24px;
+    color: #0b0500;
 }
 
 .user-feedback-author {
@@ -55,10 +61,48 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
+    color: #0b0500;
 }
 
 .user-feedback-role {
     font-size: 14px;
     line-height: 1.4;
-    color: #555;
+    color: #0b0500;
+}
+
+.user-feedback-slider {
+    display: flex;
+    gap: 16px;
+    justify-content: right;
+}
+
+.control-position {
+    display: flex;
+    align-items: center;
+}
+
+.user-feedback-swiper .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.user-feedback-swiper .swiper-pagination-bullet-active {
+    background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    .user-feedback-item {
+        width: calc((100% - 24) / 2);
+        height: 244px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .user-feedback-title {
+        font-size: 48px;
+    }
+
+    .user-feedback-item {
+        width: calc((100% - 48) / 3);
+        height: 217px;
+    }
 }

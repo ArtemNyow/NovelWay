@@ -1,16 +1,25 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const userFeedbackSwiper = new Swiper('.user-feedback-swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination, Keyboard],
   slidesPerView: 1,
   spaceBetween: 24,
   loop: false,
   navigation: {
     nextEl: '.user-swiper-button-next',
     prevEl: '.user-swiper-button-prev',
+  },
+  pagination: {
+    el: '.user-feedback-pagination',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
   breakpoints: {
     768: {
