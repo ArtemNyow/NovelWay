@@ -45,11 +45,17 @@
     font-size: 12px;
     color: #0b0500;
     margin-top: 12px;
+    display: none;
+}
+
+.footer-input-text.visible {
+    display: block;
 }
 
 .footer-title {
     color: #0b0500;
     margin-bottom: 16px;
+
 }
 
 .decor-line {
@@ -97,7 +103,7 @@
         justify-content: center;
     }
 
-    .footer-input-text {
+    .footer-input-text.visible {
         text-align: center;
         margin-right: 260px;
     }
@@ -131,10 +137,11 @@
         justify-content: end;
     }
 
-    .footer-input-text {
+    .footer-input-text.visible {
         display: flex;
         justify-content: end;
         white-space: nowrap;
+
     }
 
     .footer-title {
