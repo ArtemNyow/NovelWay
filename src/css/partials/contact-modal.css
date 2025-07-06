@@ -25,7 +25,7 @@
   border-radius: 16px;
   padding: 64px 16px;
   width: 100%;
-  max-width: 343px;
+  /* max-width: 343px; */
   min-height: calc(100vh - 128px);
   min-height: min-content;
   overflow-y: auto;
@@ -142,14 +142,14 @@
 }
 
 /* Переломи */
-@media only screen and (max-width: 375px) {
+@media only screen and (min-width: 375px) {
   .modal {
-    padding: 16px 8px;
+    /* padding: 16px 8px; */
   }
 
   .modal-content {
-    padding: 24px 12px;
-    max-width: 304px;
+    /* padding: 24px 12px; */
+    width: 343px;
     max-height: calc(100vh - 32px);
   }
 
@@ -168,7 +168,7 @@
   }
 
   .modal-content {
-    max-width: 704px;
+    width: 704px;
     max-height: calc(100vh - 128px);
     padding: 64px 32px;
   }
@@ -185,7 +185,7 @@
   }
 
   .modal-content {
-    max-width: 866px;
+    width: 866px;
     padding: 64px;
   }
 
