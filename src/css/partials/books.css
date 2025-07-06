@@ -1,18 +1,18 @@
 .books {
-  min-width: 320px;
   width: 100%;
-  max-width: 100%;
   margin: 12px auto;
-  padding: 0 16px;
 }
+
 .books__header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto 24px;
 }
+
 .books__options {
   display: none;
 }
+
 .books__options .books__title {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
@@ -20,6 +20,7 @@
   line-height: 1.5;
   color: #0b0500;
 }
+
 .books__counter {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -27,12 +28,15 @@
   line-height: 1.5;
   color: #0b0500;
 }
+
 .books__controls {
   margin: 0 auto;
 }
+
 .books__controls label {
   display: none;
 }
+
 .books__controls select {
   display: flex;
   align-items: center;
@@ -48,11 +52,13 @@
   margin: 0 auto 24px;
   appearance: none;
 }
+
 .books__select-wrapper {
   position: relative;
   width: 100%;
   max-width: 342px;
 }
+
 .books__select-icon {
   position: absolute;
   right: 12px;
@@ -61,16 +67,19 @@
   pointer-events: none;
   fill: #0b0500;
 }
+
 .books__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
+
 .books__item {
   border-radius: 8px;
   max-width: 343px;
 }
+
 .book-card__thumb {
   width: 100%;
   max-width: 343px;
@@ -85,8 +94,8 @@
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.book-card__block {
-}
+
+
 .book-card__title {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
@@ -95,6 +104,7 @@
   text-transform: capitalize;
   color: #0b0500;
 }
+
 .book-card__author {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -102,6 +112,7 @@
   line-height: 1.5;
   color: #0b0500;
 }
+
 .book-card__price {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
@@ -109,15 +120,18 @@
   line-height: 1.5;
   color: #0b0500;
 }
+
 .btn-books {
   padding: 8px 20px;
   width: 100%;
   height: 40px;
   margin: 0 auto 24px;
 }
+
 .btn-books:hover {
   background: #ea8d50;
 }
+
 .books__more-btn {
   border-radius: 4px;
   padding: 12px 24px;
@@ -125,6 +139,7 @@
   height: 48px;
   margin: 0 auto;
 }
+
 .books__more-btn:hover {
   border: 1px solid #0b0500;
   background: #fceee6;
@@ -133,7 +148,7 @@
 
 @media only screen and (min-width: 375px) {
   .books {
-    max-width: 375px;
+    width: 375px;
   }
 }
 
@@ -141,64 +156,77 @@
 @media only screen and (min-width: 768px) {
   .books {
     margin: 40px auto;
-    padding: 0 32px;
-    max-width: 768px;
+    width: 768px;
   }
+
   .books-header__main {
     display: flex;
     align-items: center;
     gap: 24px;
   }
+
   .books__header {
     align-items: center;
     flex: 1;
     margin-bottom: 32px;
   }
+
   .books__controls {
     margin-right: 0;
   }
+
   .books__controls select {
     width: 249px;
     height: 43px;
     margin-bottom: 32px;
   }
+
   .books__list {
     gap: 24px;
   }
+
   .books__item {
     width: 340px;
   }
+
   .books__more-btn {
     width: 342px;
     margin: 0 auto;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   .books {
-    max-width: 1440px;
-    padding: 0 64px;
+    width: 1440px;
   }
+
   .books-desktop__correct {
     display: flex;
   }
+
   .books-header__main {
     flex-direction: column;
     align-items: start;
     gap: 0;
   }
+
   .books__header {
     margin: 0 0 32px 0;
     gap: 125px;
   }
+
   .books-desktop__header {
     max-width: 308px;
   }
+
   .books__controls select {
     display: none;
   }
+
   .books__select-icon {
     display: none;
   }
+
   .books__options {
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -210,12 +238,15 @@
     color: #0b0500;
     width: 308px;
   }
+
   .books__item {
     width: 227px;
   }
+
   .books__list {
     margin-left: 24px;
   }
+
   .books__more-btn {
     margin: 0 auto;
   }
