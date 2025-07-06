@@ -153,6 +153,11 @@
   margin-bottom: 24px;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 @media screen and (min-width: 375px) {
   .book-modal {
     max-width: 375px;
@@ -192,6 +197,11 @@
   .form-book-quantity {
     margin-bottom: 24px;
   }
+
+  .book-modal-list {
+    max-width: 307px;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -202,6 +212,11 @@
   .book-modal {
     max-width: 1300px;
     padding: 64px 104px;
+  }
+
+  .book-modal-info {
+    max-width: 759px;
+    width: 100%;
   }
 
   .btn-icon-close {
@@ -218,5 +233,10 @@
 
   .btn-gap {
     margin-right: 24px;
+  }
+
+  .book-modal-list {
+    max-width: 759px;
+    width: 100%;
   }
 }
