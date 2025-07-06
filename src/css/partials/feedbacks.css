@@ -1,0 +1,64 @@
+.user-feedback-section {
+    padding-bottom: 64px;
+}
+
+.user-feedback-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    padding-bottom: 24px;
+}
+
+.user-feedback-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 80px;
+}
+
+.user-feedback-swiper {
+    padding-bottom: 32px;
+}
+
+.user-feedback-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}
+
+.user-feedback-item {
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 16px;
+    width: 341px;
+    height: 314px;
+    padding: 32px 32px 107px 32px;
+    box-sizing: border-box;
+}
+
+.user-feedback-item-title {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-bottom: 24px;
+}
+
+.user-feedback-author {
+    display: flex;
+    gap: 16px;
+}
+
+.user-feedback-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.user-feedback-role {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+}
