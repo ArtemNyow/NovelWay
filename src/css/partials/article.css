@@ -1,0 +1,62 @@
+.article {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin: 0 auto;
+}
+
+.article-titel,
+.article-text,
+.article-card {
+  width: 100%;
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+.article-titel {
+  font: 600 36px / 1.2 'Rubik', sans-serif;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+}
+
+.article-text {
+  font: 18px / 1.5 'Rubik', sans-serif;
+  color: #0b0500;
+  margin-top: 24px;
+}
+
+.article-card {
+  margin-top: 32px;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .article-titel,
+  .article-text,
+  .article-card {
+    width: 704px;
+    max-width: inherit;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container-article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .article-titel,
+  .article-text,
+  .article-card {
+    width: 640px;
+  }
+  .article-card {
+    margin-top: 0;
+  }
+}

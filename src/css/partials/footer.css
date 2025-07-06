@@ -1,0 +1,166 @@
+.footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-container {
+    background-color: #ea8d50;
+    padding: 80px 16px;
+}
+
+.logo-footer {
+    display: flex;
+    margin: 0 auto;
+}
+
+.footer-list {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.footer-list-item {
+    margin-bottom: 32px;
+}
+
+.footer-form {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-input {
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 221px;
+    height: 48px;
+}
+
+.footer-btn-form {
+    width: 106px;
+    background-color: #ea8d50;
+}
+
+.footer-input-text {
+    font-size: 12px;
+    color: #0b0500;
+    margin-top: 12px;
+    display: none;
+}
+
+.footer-input-text.visible {
+    display: block;
+}
+
+.footer-title {
+    color: #0b0500;
+    margin-bottom: 16px;
+
+}
+
+.decor-line {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 343px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-top: 80px;
+    margin-bottom: 32px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-input::placeholder {
+    color: rgba(11, 5, 0, 0.6);
+}
+
+@media screen and (min-width: 375px) {
+    .footer {
+        width: 375px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        width: 768px;
+        height: 535px;
+    }
+
+    .footer-list {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .decor-line {
+        width: 640px;
+    }
+
+    .footer-form {
+        justify-content: center;
+    }
+
+    .footer-input-text.visible {
+        text-align: center;
+        margin-right: 260px;
+    }
+
+    .footer-title {
+        text-align: center;
+        margin-right: 300px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .footer {
+        width: 1440px;
+        height: 411px
+    }
+
+    .footer-list {
+        display: flex;
+        justify-content: left;
+    }
+
+    .logo-footer {
+        display: flex;
+        justify-content: left;
+        margin: 0;
+    }
+
+    .footer-form {
+        justify-content: end;
+    }
+
+    .footer-input-text.visible {
+        display: flex;
+        justify-content: end;
+        white-space: nowrap;
+
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: end;
+    }
+
+    .footer-div {
+        display: flex;
+        justify-content: center;
+        gap: 550px;
+
+    }
+
+    .form-container {
+        margin-top: 25px;
+    }
+
+    .decor-line {
+        width: 1312px;
+    }
+}
