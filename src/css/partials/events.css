@@ -1,6 +1,8 @@
 .events {}
 
-.events-container{}
+.events-container{
+    margin-bottom: 64px;
+}
 
 .events-text-container {
     margin-bottom: 32px;
@@ -31,33 +33,16 @@
     color: #0b0500;
 }
 
-.swiper {
-    /* width: 100%;
-    max-width: 1200px;
-    margin: auto; */
-}
-
 .events-list {
     gap: 24px;
     margin-bottom: 56px;
 }
 
-.swiper-wrapper {}
-
 .events-list-item {
     width: 100%; 
 }
 
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.events-list-item-img {
-    width: 342px;
-    height: 277px;
-}
+.events-list-item-img {}
 
 .events-list-item-text-container{
  display: flex;
@@ -67,9 +52,7 @@
  height: 220px;
 }
 
-.events-list-item-text-container-text {
-
-}
+.events-list-item-text-container-text {}
 
 .events-list-item-format {
     font-weight: 400;
@@ -77,13 +60,6 @@
     line-height: 1.5;
     color: #0b0500;
     margin-bottom: 8px;
-}
-
-.events-list-item-date {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #0b0500;
 }
 
 .events-list-item-title {
@@ -118,23 +94,48 @@
     fill: #0b0500;
     width: 24px;
     height: 24px;
-    overflow: visible;
-        /* Усуньте hidden */
-        display: block;
-        color: inherit;
 }
 
-.swiper-pagination {}
-
-.swiper-button-prev {
-    background-image: url('/src/img/sprite.svg#icon-left-arrow-alt');
-    fill: #0b0500;
+.swiper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.arrow-btn {}
+.swiper-wrapper {
+    display: flex;
+}
 
-.swiper-button-next {
-    background-image: url('/src/img/sprite.svg#icon-right-arrow-alt');
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.slider-controls{
+    position: relative;
+}
+
+.slider-controls .swiper-button-prev,
+.slider-controls .swiper-button-next {
+    width: 48px;
+    height: 48px;
+
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+    content: none;
 }
 
 @media screen and (min-width: 374px){
@@ -173,13 +174,6 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        display: none;
+        display: none !important;
     }
-
-    .swiper-pagination {
-        display: none;     
-    }
-
-
-
 }
