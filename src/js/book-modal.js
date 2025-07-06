@@ -6,6 +6,11 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const backdrop = document.querySelector('.backdrop');
 const closeBtn = document.querySelector('.btn-icon-close');
+const minus = document.querySelector('.minus');
+const inputSum = document.querySelector('.form-input-sum');
+const plus = document.querySelector('.plus');
+
+inputSum.value = 1;
 
 closeBtn.addEventListener('click', closeModal);
 
@@ -24,4 +29,18 @@ document.addEventListener('keydown', event => {
 function closeModal(event) {
   backdrop.classList.remove('is-open-book-modal');
   document.body.classList.remove('no-scroll');
+}
+
+minus.addEventListener('click', minusBtn);
+
+function minusBtn(event) {
+  if (inputSum.value > 1) {
+    inputSum.value = Number(inputSum.value) - 1;
+  }
+}
+
+plus.addEventListener('click', plusBtn);
+
+function plusBtn(event) {
+  inputSum.value = Number(inputSum.value) + 1;
 }

@@ -20,8 +20,10 @@
 
   navLinks.forEach(link => {
     link.addEventListener('click', event => {
+      const href = link.getAttribute('href');
+      if (!href.startsWith('#')) return;
       event.preventDefault();
-      const targetId = link.getAttribute('href').slice(1);
+      const targetId = href.slice(1);
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
