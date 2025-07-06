@@ -22,7 +22,8 @@
 
 .book-modal {
   margin: 0 auto;
-  width: 343px;
+  max-width: 343px;
+  width: 100%;
   height: auto;
   border-radius: 16px;
   padding: 64px 16px;
@@ -31,11 +32,18 @@
 }
 
 .btn-icon-close {
-  border: none;
   background-color: inherit;
   position: absolute;
   top: 16px;
   right: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-close {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .book-modal-title {
@@ -64,6 +72,7 @@
 
 .form-book-quantity {
   display: flex;
+  max-width: 100%;
   gap: 8px;
   margin-bottom: 16px;
 }
@@ -71,7 +80,8 @@
 .btn-icon {
   border: 1px solid #0b0500;
   padding: 0;
-  width: 32px;
+  max-width: 32px;
+  width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
@@ -82,7 +92,8 @@
 
 .form-input-sum {
   border-radius: 8px;
-  width: 42px;
+  width: 100%;
+  max-width: 42px;
   height: 40px;
 }
 
@@ -90,7 +101,8 @@
   display: block;
   margin: 0 auto;
   padding: 12px auto;
-  width: 311px;
+  max-width: 311px;
+  width: 100%;
   height: 48px;
   margin-bottom: 24px;
 }
@@ -103,6 +115,11 @@
   border: none;
   background-color: inherit;
   padding: 0;
+}
+
+.book-modal-list {
+  max-width: 311px;
+  width: 100%;
 }
 
 .book-modal-list-item {
@@ -136,13 +153,22 @@
   margin-bottom: 24px;
 }
 
+@media screen and (min-width: 375px) {
+  .book-modal {
+    max-width: 375px;
+    width: 100%;
+    justify-items: center;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .backdrop {
     padding: 22px 32px;
   }
 
   .book-modal {
-    width: 704px;
+    max-width: 704px;
     padding-left: 32px;
     padding-right: 32px;
     display: flex;
@@ -174,7 +200,7 @@
   }
 
   .book-modal {
-    width: 1300px;
+    max-width: 1300px;
     padding: 64px 104px;
   }
 
