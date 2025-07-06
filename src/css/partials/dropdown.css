@@ -24,6 +24,17 @@
   cursor: pointer;
 }
 
+.dropdown-label {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-arrow {
+  flex-shrink: 0;
+}
+
 .dropdown-menu {
   display: none;
   position: absolute;
