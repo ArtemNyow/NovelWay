@@ -13,6 +13,7 @@ const formBookModal = document.querySelector('.form-book-modal');
 const addToCartBtn = document.querySelector('.add-to-cart');
 const buyNowBtn = document.querySelector('.buy-now');
 const accordion = document.querySelector('.accordion-container');
+// const isOpenAcc = document.querySelector('.ac-trigger');
 
 new Accordion('.accordion-container');
 
