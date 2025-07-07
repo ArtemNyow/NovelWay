@@ -80,6 +80,16 @@ a .banner-btn:focus {
   width: 100%;
 }
 
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-left: auto;
+}
+
 .slider-controls .swiper-button-prev,
 .slider-controls .swiper-button-next {
   width: 48px;

@@ -31,7 +31,7 @@
   text-overflow: ellipsis;
 }
 
-.icon-arrow {
+.icon-chevron-down {
   flex-shrink: 0;
 }
 
@@ -70,14 +70,14 @@
   border-radius: 4px;
 }
 
-.dropdown-menu li a {
+.dropdown-menu-link {
   display: block;
   padding: 8px 16px;
   text-decoration: none;
   color: black;
 }
 
-.dropdown-menu li a:hover {
+.dropdown-menu-link:hover {
   background-color: rgba(11, 5, 0, 0.05);
 }
 

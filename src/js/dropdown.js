@@ -1,6 +1,6 @@
 const toggle = document.querySelector('.dropdown-toggle');
 const dropdown = document.querySelector('.dropdown');
-const links = document.querySelectorAll('.dropdown-menu a');
+const links = document.querySelectorAll('.dropdown-menu-link');
 const label = document.querySelector('.dropdown-label');
 
 toggle.addEventListener('click', (event) => {
@@ -19,7 +19,7 @@ links.forEach(link => {
     event.preventDefault();
 
     const selectedCategory = link.dataset.category || link.textContent; 
-    label.textContent = selectedCategory;
+    label.textContent = selectedCategory; 
 
     dropdown.classList.remove('open');
   });
