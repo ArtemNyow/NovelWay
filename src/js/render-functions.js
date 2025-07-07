@@ -1,4 +1,4 @@
-import { getCategories, getTopBooks } from "./api/bookApi"
+import { getCategories } from "./api/bookApi"
 import { refs } from "./refs";
 
 
@@ -20,7 +20,7 @@ export const markupBooks = books => {
                   <h3 class="book-card__title">${title}</h3>
                   <p class="book-card__author">${author}</p>
                 </div>
-                <p class="book-card__price">$${price}</p>
+                <p class="book-card__price">$${Math.round(price)}</p>
               </div>
               <button class="btn-gray btn-books" type="button" data-id="${_id}">
                 Learn More
@@ -37,7 +37,16 @@ export const renderBooksList = books => {
 export const markupCategoriesOption = categoris => {
     return categoris.map(
         ({ list_name }) =>
-    `<option class="option-category" value="${list_name}">${list_name}</option>`
+        `
+         <li>
+                  <a
+                    class="dropdown-menu-link option-category"
+                    href="#"
+                    data-category="${list_name}"
+                    value="${list_name}"
+                    >${list_name}</a
+                  >
+                </li>`
     ).join('');
 }
 
@@ -46,7 +55,7 @@ export const renderCategoriesOption = async () => {
     const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
 
     filtered.unshift({ list_name: 'Categories' })
-    refs.bookCategoryOption.insertAdjacentHTML('beforeend',markupCategoriesOption(filtered))
+    refs.bookCategoryDropdown.insertAdjacentHTML('beforeend',markupCategoriesOption(filtered))
 }
 
 export const markupCategories = categoris => {
@@ -68,7 +77,6 @@ export const renderCategories = async () => {
 }
 
 export const markupModal = ({ book_image, title, author, price, description, publisher }) => {
-    // Якщо description порожнє або null/undefined/порожній рядок, використовуємо publisher
     const descriptionText = description && description.trim() !== '' ? description : publisher;
   
     return `
@@ -98,7 +106,7 @@ export const markupModal = ({ book_image, title, author, price, description, pub
                 <use href="/img/sprite.svg#icon-minus"></use>
               </svg>
             </button>
-            <input class="form-input-sum" name="number" type="text" />
+            <input class="form-input-sum" maxlength="2" name="number" type="text" />
             <button class="btn-icon plus" type="button">
               <svg class="icon-price-plus" width="14" height="14">
                 <use href="/img/sprite.svg#icon-plus"></use>

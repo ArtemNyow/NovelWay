@@ -51,7 +51,7 @@ initAllBooks();
 renderCategoriesOption();
 renderCategories();
 refs.bookCategory.addEventListener('click', handleCategoryClick)
-refs.bookCategoryOption.addEventListener('change', handleCategorySelect);
+// refs.bookCategoryOption.addEventListener('change', handleCategorySelect);
 refs.showMore.addEventListener("click", renderNextBooks);
 document.body.addEventListener("click", handleBookButtonClick);
 

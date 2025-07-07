@@ -13,14 +13,80 @@
           </div>
           <!-- селект категорій -->
           <div class="books__controls">
-            <label for="books-category" class="visually-hidden"
-              >Categories</label
-            >
-            <div class="books__select-wrapper">
-              <select id="books-category" class="books__select"></select>
-              <svg class="books__select-icon" width="24" height="24">
-                <use href="../img/sprite.svg#icon-chevron-down"></use>
-              </svg>
+            <!-- селект категорій -->
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span class="dropdown-label">Categories</span>
+                <svg class="icon-chevron-down" width="24" height="24">
+                  <use href="/img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="All categories"
+                    >All categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Combined Print and E-book Fiction"
+                    >Combined Print and E-book Fiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Combined Print & E-book Nonfiction"
+                    >Combined Print & E-book Nonfiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Hardcover fiction"
+                    >Hardcover fiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Paperback trade fiction"
+                    >Paperback trade fiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Paperback nonfiction"
+                    >Paperback nonfiction</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Advice, how-to & Miscellaneous"
+                    >Advice, how-to & Miscellaneous</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-menu-link"
+                    href="#"
+                    data-category="Children's middle grade hardcover"
+                    >Children's middle grade hardcover</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>

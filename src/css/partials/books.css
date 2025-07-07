@@ -27,45 +27,100 @@
   font-size: 14px;
   line-height: 1.5;
   color: #0b0500;
+  width: 130px;
+  align-self: center;
 }
 
-.books__controls {
-  margin: 0 auto;
-}
-
-.books__controls label {
-  display: none;
-}
-
-.books__controls select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 8px;
-  border: 1px solid rgba(11, 5, 0, 0.15);
-  border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
-  height: 43px;
-  background: rgba(11, 5, 0, 0.05);
-  margin: 0 auto 24px;
-  appearance: none;
-}
-
-.books__select-wrapper {
+.dropdown {
   position: relative;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto 24px;
   width: 100%;
   max-width: 342px;
 }
 
-.books__select-icon {
+.dropdown-toggle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 342px;
+  height: 43px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #0b0500;
+
+  cursor: pointer;
+}
+
+.dropdown-label {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-chevron-down {
+  flex-shrink: 0;
+}
+
+.dropdown-menu {
+  display: none;
   position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  fill: #0b0500;
+  list-style: none;
+  z-index: 100;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0b0500;
+
+  width: 100%;
+  max-width: 342px;
+  height: 296px;
+  background-color: rgba(11, 5, 0, 0.05);
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e15d05 transparent;
+  margin-top: 40px;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #e15d05;
+  border-radius: 4px;
+}
+
+.dropdown-menu-link {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu-link:hover {
+  background-color: rgba(11, 5, 0, 0.05);
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
 }
 
 .books__list {
@@ -95,7 +150,6 @@
   margin-bottom: 16px;
 }
 
-
 .book-card__title {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
@@ -103,6 +157,10 @@
   line-height: 1.5;
   text-transform: capitalize;
   color: #0b0500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 177px;
 }
 
 .book-card__author {
@@ -146,24 +204,24 @@
   color: #0b0500;
 }
 
-.books__select {
-  padding-right: 15px;
-}
 
-.book-card__image {
-  background-size: cover;
-  width: 227px;
-  height: 332px;
-}
 
 
 @media only screen and (min-width: 375px) {
   .books {
     width: 375px;
   }
+
+  .dropdown {
+    margin-bottom: 24px;
+  }
+
+  .book-card__image {
+    width: 343px;
+    height: 487px;
+  }
 }
 
-/* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .books {
     margin: 40px auto;
@@ -182,19 +240,27 @@
     margin-bottom: 32px;
   }
 
-  .books__controls {
-    margin-right: 0;
+  .dropdown {
+    margin-left: auto;
+    margin-bottom: 32px;
   }
 
-  .books__controls select {
+  .dropdown-toggle {
     width: 249px;
-    height: 43px;
-    margin-bottom: 32px;
-    padding-right: 40px
+  }
+
+  .book-card__image {
+    width: 340px;
+    height: 473px;
+  }
+
+  .dropdown-menu {
+    width: 249px;
+    height: 338px;
   }
 
   .books__list {
-    gap: 24px;
+    gap: 40px 24px;
   }
 
   .books__item {
@@ -204,10 +270,6 @@
   .books__more-btn {
     width: 342px;
     margin: 0 auto;
-  }
-
-  .books__select {
-    padding-right: 15px;
   }
 }
 
@@ -228,19 +290,32 @@
 
   .books__header {
     margin: 0 0 32px 0;
-    gap: 125px;
+    gap: 105px;
   }
 
   .books-desktop__header {
     max-width: 308px;
   }
 
-  .books__controls select {
+  .book-card__image {
+    width: 227px;
+    height: 332px;
+  }
+
+  .dropdown {
     display: none;
   }
 
-  .books__select-icon {
-    display: none;
+  .books__options {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #0b0500;
+    width: 308px;
   }
 
   .books__item {
@@ -254,12 +329,4 @@
   .books__more-btn {
     margin: 0 auto;
   }
-
-  .books__options {
-    display: block;
-  }
-}
-
-.is-hidden {
-  display: none;
 }

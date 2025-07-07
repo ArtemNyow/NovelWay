@@ -94,6 +94,11 @@
   width: 100%;
   max-width: 42px;
   height: 40px;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .form-btn-book-modal {
@@ -255,6 +260,7 @@
     top: 16px;
     right: 16px;
   }
+
   .form-book-quantity {
     margin-bottom: 16px;
   }
