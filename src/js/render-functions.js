@@ -37,7 +37,7 @@ export const renderBooksList = books => {
 export const markupCategoriesOption = categoris => {
     return categoris.map(
         ({ list_name }) =>
-            `<option class="option-category" value="${list_name}">${list_name}</option>`
+    `<option class="option-category" value="${list_name}">${list_name}</option>`
     ).join('');
 }
 
@@ -53,8 +53,7 @@ export const markupCategories = categoris => {
     return categoris.map(
         ({ list_name }) =>
             `<li class="books__option-item">
-            <a id="childrens-middle-grade" href="#" class="books__option">
-              ${list_name}
+            <a id="childrens-middle-grade" href="#" class="books__option" data-category="${list_name}">${list_name}
             </a>
           </li>`
     ).join('');
