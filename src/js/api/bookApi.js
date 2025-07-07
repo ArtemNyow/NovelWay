@@ -14,8 +14,8 @@ export async function getCategories() {
 
 export async function getTopBooks() {
   try {
-    const res = await axios.get(`${BASE_URL}/top-books`);
-    return res.data;
+    const {data} = await axios.get(`${BASE_URL}/top-books`);
+    return data.book;
   } catch (error) {
     iziToast.error({ message: error.message, position: 'topRight' });
   }
