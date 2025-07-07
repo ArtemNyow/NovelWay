@@ -1,0 +1,283 @@
+.backdrop {
+  padding: 32px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.is-open-book-modal {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.book-modal {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  padding: 64px 16px;
+  position: relative;
+  background-color: #fceee6;
+}
+
+.btn-icon-close {
+  background-color: inherit;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-close {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.book-modal-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.book-modal-text {
+  font-size: 14px;
+  color: #0b0500;
+  margin-bottom: 8px;
+}
+
+.book-modal-price {
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #0b0500;
+  margin-bottom: 24px;
+}
+
+.form-book-quantity {
+  display: flex;
+  max-width: 100%;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-icon {
+  border: 1px solid #0b0500;
+  padding: 0;
+  max-width: 32px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #0b0500;
+  background-color: inherit;
+}
+
+.form-input-sum {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 42px;
+  height: 40px;
+}
+
+.form-btn-book-modal {
+  display: block;
+  margin: 0 auto;
+  padding: 12px auto;
+
+  width: 100%;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.form-btn-book-modal:last-child {
+  margin-bottom: 32px;
+}
+
+.btn-icon-down {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+}
+
+.accordeon-container {
+  max-width: 311px;
+  width: 100%;
+}
+
+.ac {
+  background-color: inherit !important;
+}
+
+.ac-item {
+  border-top: 1px solid rgba(11, 5, 0, 0.15) !important;
+}
+
+.ac:last-child {
+  border-bottom: 1px solid rgba(11, 5, 0, 0.15);
+}
+
+.ac-trigger {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0b0500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 0 !important;
+  max-width: 311px;
+  width: 100%;
+  height: 59px;
+}
+
+.ac .ac-trigger::after {
+  display: none !important;
+}
+
+.ac-trigger .icon-down {
+  position: absolute;
+  right: 0;
+}
+
+.icon-down-hidden {
+  display: inline-block;
+}
+
+.icon-up-hidden {
+  display: none;
+}
+
+.ac.is-active .icon-down-hidden {
+  display: none;
+}
+
+.ac.is-active .icon-up-hidden {
+  display: inline-block;
+}
+
+.book-modal-item-text {
+  color: #0b0500;
+  margin-bottom: 24px;
+}
+
+.book-modal-item-text:last-child {
+  margin-bottom: 24px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .book-modal {
+    width: 343px;
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 22px 32px;
+  }
+
+  .book-modal {
+    width: 704px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .book-modal-images {
+    flex-shrink: 0;
+    width: 309px;
+  }
+
+  .btn-icon-close {
+    top: 32px;
+    right: 25px;
+  }
+
+  .book-modal-title {
+    margin-top: 0;
+  }
+
+  .form-book-quantity {
+    margin-bottom: 24px;
+  }
+
+  .accordeon-container {
+    max-width: 307px;
+    width: 100%;
+  }
+
+  .ac-trigger {
+    max-width: 307px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .backdrop {
+    padding: 64px 70px;
+  }
+
+  .book-modal {
+    width: 1300px;
+    padding: 64px 104px;
+  }
+
+  .book-modal-info {
+    width: 100%;
+  }
+
+  .btn-icon-close {
+    top: 16px;
+    right: 16px;
+  }
+  .form-book-quantity {
+    margin-bottom: 16px;
+  }
+
+  .form-buttons {
+    display: flex;
+  }
+
+  .form-btn-book-modal {
+    display: inline-block;
+  }
+
+  .btn-gap {
+    margin-right: 24px;
+  }
+
+  .accordeon-container {
+    max-width: 759px;
+    width: 100%;
+  }
+
+  .ac-trigger {
+    max-width: 759px;
+    width: 100%;
+  }
+}
