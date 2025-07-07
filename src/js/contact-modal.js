@@ -51,6 +51,24 @@ function initContactModal() {
     return true;
   }
 
+  function showToastError() {
+    iziToast.error({
+      title: 'Error',
+      message: 'Please fill in all required fields',
+      position: 'topRight',
+      timeout: 5000,
+    });
+  }
+
+  function showToastSuccess() {
+    iziToast.success({
+      title: 'Success',
+      message: 'Registration successful!',
+      position: 'topRight',
+      timeout: 5000,
+    });
+  }
+
   function closeModal() {
     const modal = document.getElementById('contactModal');
     modal.style.display = 'none';
@@ -91,7 +109,10 @@ function initContactModal() {
       }
     });
 
-    if (!isValid) return;
+    if (!isValid) {
+      showToastError();
+      return;
+    }
 
     const formData = {
       eventId: document.getElementById('eventId').value,
@@ -102,6 +123,7 @@ function initContactModal() {
     };
 
     console.log('Form submitted:', formData);
+    showToastSuccess();
     closeModal();
   });
 
