@@ -1,4 +1,4 @@
-import { getTopBooks } from "./api/bookApi"
+import { getCategories, getTopBooks } from "./api/bookApi"
 import { refs } from "./refs";
 
 
@@ -20,7 +20,7 @@ export const markupBooks = books => {
                   <h3 class="book-card__title">${title}</h3>
                   <p class="book-card__author">${author}</p>
                 </div>
-                <p class="book-card__price">$${price ?? '0.00'}</p>
+                <p class="book-card__price">$${price}</p>
               </div>
               <button class="btn-gray btn-books" type="button" data-id="${_id}">
                 Learn More
@@ -29,8 +29,42 @@ export const markupBooks = books => {
           </li>`
     ).join('');
 }
-export const renderBooksList = async () => {
-    const bookArr = await getTopBooks();
-    console.log('bookArr:', bookArr);
-    refs.bookList.insertAdjacentHTML('beforeend',markupBooks(bookArr))
+export const renderBooksList = books => {
+    refs.bookList.insertAdjacentHTML('beforeend',markupBooks(books))
 }
+
+
+export const markupCategoriesOption = categoris => {
+    return categoris.map(
+        ({ list_name }) =>
+            `<option class="option-category" value="${list_name}">${list_name}</option>`
+    ).join('');
+}
+
+export const renderCategoriesOption = async () => {
+    const categoriesArr = await getCategories();
+    const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
+
+    filtered.unshift({ list_name: 'Categories' })
+    refs.bookCategoryOption.insertAdjacentHTML('beforeend',markupCategoriesOption(filtered))
+}
+
+export const markupCategories = categoris => {
+    return categoris.map(
+        ({ list_name }) =>
+            `<li class="books__option-item">
+            <a id="childrens-middle-grade" href="#" class="books__option">
+              ${list_name}
+            </a>
+          </li>`
+    ).join('');
+}
+
+export const renderCategories = async () => {
+    const categoriesArr = await getCategories();
+    const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
+
+    filtered.unshift({ list_name: 'All categories' })
+    refs.bookCategory.insertAdjacentHTML('beforeend',markupCategories(filtered))
+}
+

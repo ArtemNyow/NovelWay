@@ -5,7 +5,9 @@ const BASE_URL = 'https://books-backend.p.goit.global/books';
 
 export async function getCategories() {
   try {
-    const res = await axios.get(`${BASE_URL}/category-list`);
+    const res = await axios.get(`${BASE_URL}/category-list`,{
+      
+    });
     return res.data;
   } catch (error) {
     iziToast.error({ message: error.message, position: 'topRight' });
@@ -15,7 +17,7 @@ export async function getCategories() {
 export async function getTopBooks() {
   try {
     const {data} = await axios.get(`${BASE_URL}/top-books`);
-    return data.book;
+    return data;
   } catch (error) {
     iziToast.error({ message: error.message, position: 'topRight' });
   }

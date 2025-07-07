@@ -146,6 +146,11 @@
   color: #0b0500;
 }
 
+.books__select {
+  padding-right: 15px;
+}
+
+
 @media only screen and (min-width: 375px) {
   .books {
     width: 375px;
@@ -179,6 +184,7 @@
     width: 249px;
     height: 43px;
     margin-bottom: 32px;
+    padding-right: 40px
   }
 
   .books__list {
@@ -192,6 +198,10 @@
   .books__more-btn {
     width: 342px;
     margin: 0 auto;
+  }
+
+  .books__select {
+    padding-right: 15px;
   }
 }
 
@@ -227,18 +237,6 @@
     display: none;
   }
 
-  .books__options {
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #0b0500;
-    width: 308px;
-  }
-
   .books__item {
     width: 227px;
   }
@@ -249,5 +247,9 @@
 
   .books__more-btn {
     margin: 0 auto;
+  }
+
+  .books__options {
+    display: block;
   }
 }
