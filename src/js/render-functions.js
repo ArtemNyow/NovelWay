@@ -67,3 +67,121 @@ export const renderCategories = async () => {
     refs.bookCategory.insertAdjacentHTML('beforeend',markupCategories(filtered))
 }
 
+export const markupModal = ({ book_image,title,author,price }) => {
+    return `
+  <div class="book-modal">
+    <div class="book-modal-images">
+      <button class="close-btn btn-icon-close" type="button">
+        <svg class="icon-close" width="14" height="14">
+          <use href="/img/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <img
+        class="image-book-modal"
+        src="${book_image}"
+        alt="${title}"
+        width="309"
+        height="467"
+      />
+    </div>
+    <div class="book-modal-info">
+      <h2 class="book-modal-title">${title}</h2>
+      <p class="book-modal-text">${author}</p>
+      <p class="book-modal-price">$${price}</p>
+      <form class="form-book-modal">
+        <div class="form-book-quantity">
+          <button class="btn-icon minus" type="button">
+            <svg class="icon-price-minus" width="14" height="14">
+              <use href="/img/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+          <input class="form-input-sum" name="number" type="text" />
+          <button class="btn-icon plus" type="button">
+            <svg class="icon-price-plus" width="14" height="14">
+              <use href="/img/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="form-buttons">
+          <button
+            class="form-btn-book-modal add-to-cart btn-gap btn-orange"
+            type="button"
+          >
+            Add To Cart
+          </button>
+          <button class="form-btn-book-modal buy-now btn-gray" type="submit">
+            Buy Now
+          </button>
+        </div>
+      </form>
+      <ul class="accordeon-container">
+        <li class="ac ac-item">
+          <button class="ac-trigger">
+            Details
+            <svg class="icon-down icon-down-hidden" width="24" height="24">
+              <use href="/img/sprite.svg#icon-chevron-down"></use>
+            </svg>
+            <svg class="icon-down icon-up-hidden" width="24" height="24">
+              <use href="/img/sprite.svg#icon-chevron-up"></use>
+            </svg>
+          </button>
+          <div class="ac-panel">
+            <p class="book-modal-item-text">
+              I Will Find You is a gripping thriller by the master of suspense,
+              Harlan Coben. The story follows David Burroughs, a former prisoner
+              wrongfully convicted of murdering his own son. When he discovers a
+              clue suggesting his son might still be alive, David escapes from
+              prison to uncover the truth. Fast-paced, emotional, and full of
+              unexpected twists — this novel will keep you hooked until the very
+              last page.
+            </p>
+          </div>
+        </li>
+        <li class="ac ac-item">
+          <button class="ac-trigger">
+            Shipping
+            <svg class="icon-down icon-down-hidden" width="24" height="24">
+              <use href="/img/sprite.svg#icon-chevron-down"></use>
+            </svg>
+            <svg class="icon-down icon-up-hidden" width="24" height="24">
+              <use href="/img/sprite.svg#icon-chevron-up"></use>
+            </svg>
+          </button>
+          <div class="ac-panel">
+            <p class="book-modal-item-text">
+              We ship across the United States within 2–5 business days. All
+              orders are processed through USPS or a reliable courier service.
+              Enjoy free standard shipping on orders over $50.
+            </p>
+          </div>
+        </li>
+        <li class="ac ac-item">
+          <button class="ac-trigger">
+            Returns
+            <svg class="icon-down icon-down-hidden" width="24" height="24">
+              <use href="./img/sprite.svg#icon-chevron-down"></use>
+            </svg>
+            <svg class="icon-down icon-up-hidden" width="24" height="24">
+              <use href="./img/sprite.svg#icon-chevron-up"></use>
+            </svg>
+          </button>
+          <div class="ac-panel">
+            <p class="book-modal-item-text">
+              You can return an item within 14 days of receiving your order,
+              provided it hasn’t been used and is in its original condition. To
+              start a return, please contact our support team — we’ll guide you
+              through the process quickly and hassle-free.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+    `;
+  };
+  
+
+export function renderBookModal(book) {
+    refs.backdrop.innerHTML = "";
+    refs.backdrop.insertAdjacentHTML("beforeend",markupModal(book))
+}

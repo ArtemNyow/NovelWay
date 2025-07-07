@@ -6,5 +6,7 @@ export const refs = {
     booksСount: document.getElementById("books-count"),
     booksTotal: document.getElementById("books-total"),
     showMore: document.getElementById("books-more"),
+    openBookModal: document.querySelector('.btn-books'),
+    backdrop: document.querySelector('.backdrop'),
    
 }

@@ -1,9 +1,10 @@
 import iziToast from "izitoast";
-import { getBooksByCategory, getTopBooks } from "./api/bookApi";
+import { getBookById, getBooksByCategory, getTopBooks } from "./api/bookApi";
 import { initAllBooks, renderIndex } from "./books";
 import { refs } from "./refs";
 import { renderBooksList } from "./render-functions";
 import { updateBooksCounters } from "./helped";
+import { openModalBook } from "./book-modal";
 
 export async function handleCategoryClick(event) {
     const link = event.target.closest('.books__option');
@@ -66,7 +67,28 @@ export async function handleCategorySelect(event) {
       iziToast.error({ message: error.message, position: "topRight" });
     }
   }
+
   
+  export async function handleBookButtonClick(event) {
+    const btn = event.target.closest(".btn-books");
+    if (!btn) return;
+  
+      const bookId = btn.dataset.id;
+    if (!bookId) {
+      console.error("Не знайдено data-id у кнопки");
+      return;
+    }
+  
+    try {
+        const bookData = await getBookById(bookId);
+      openModalBook(bookData);
+    } catch (error) {
+      iziToast.error({
+        message: "Не вдалося завантажити дані книги",
+        position: "topRight",
+      });
+    }
+  }
   
 
   

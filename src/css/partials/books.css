@@ -150,6 +150,12 @@
   padding-right: 15px;
 }
 
+.book-card__image {
+  background-size: cover;
+  width: 227px;
+  height: 332px;
+}
+
 
 @media only screen and (min-width: 375px) {
   .books {

@@ -1,6 +1,6 @@
 import { getCategories, getBooksByCategory } from "./api/bookApi";
 import { updateBooksCounters } from "./helped";
-import { handleCategoryClick, handleCategorySelect } from "./hendlers";
+import {handleBookButtonClick, handleCategoryClick, handleCategorySelect } from "./hendlers";
 import { refs } from "./refs";
 import { renderBooksList, renderCategories, renderCategoriesOption } from "./render-functions";
 
@@ -52,7 +52,7 @@ renderCategoriesOption();
 renderCategories();
 refs.bookCategory.addEventListener('click', handleCategoryClick)
 refs.bookCategoryOption.addEventListener('change', handleCategorySelect);
-refs.showMore.addEventListener("click", 
-    renderNextBooks);
-  
+refs.showMore.addEventListener("click", renderNextBooks);
+document.body.addEventListener("click", handleBookButtonClick);
+
 
