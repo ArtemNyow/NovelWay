@@ -2,6 +2,19 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 function initContactModal() {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.events-list-item-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const container = button.closest('.events-list-item');
+        const title = container
+          .querySelector('.events-list-item-title')
+          .textContent.trim();
+        const id = button.getAttribute('data-id');
+        openModal(title, id);
+      });
+    });
+  });
+
   function openModal(eventName, eventId) {
     const modal = document.getElementById('contactModal');
     const eventTitleSpan = document.getElementById('eventTitle');
@@ -24,7 +37,7 @@ function initContactModal() {
   }
 
   function showError(inputElement) {
-    clearFormErrors(); // Очищення всіх попередніх помилок перед показом нової
+    clearFormErrors();
 
     const wrapper = inputElement.closest('.input-wrapper');
     const errorText = wrapper.querySelector(
@@ -116,7 +129,6 @@ function initContactModal() {
     let isValid = true;
     let errorMessages = [];
 
-    // Пошук першого недійсного поля
     let firstInvalidInput = null;
     for (const input of inputs) {
       if (!validateInput(input)) {
@@ -132,7 +144,7 @@ function initContactModal() {
         if (errorText && errorText.textContent) {
           errorMessages.push(errorText.textContent);
         }
-        break; // Зупинити після знаходження першої помилки
+        break;
       }
     }
 
