@@ -1,28 +1,26 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.footer-form');
-  const emailInput = form.querySelector('input[type="email"]');
-  const errorText = document.querySelector('.footer-input-text');
+  const input = document.querySelector('.footer-input');
 
-  form.setAttribute('novalidate', '');
+  form.addEventListener('submit', event => {
+    event.preventDefault();
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const value = emailInput.value.trim();
+    const email = input.value.trim();
 
-    if (value === '' || !emailInput.checkValidity()) {
-      errorText.classList.add('visible');
-      emailInput.classList.add('input-error');
-    } else {
-      errorText.classList.remove('visible');
-      emailInput.classList.remove('input-error');
-      form.submit();
+    if (email === '') {
+      iziToast.warning({
+        title: 'Увага',
+        message: 'Поле email не може бути порожнім!',
+        position: 'topRight',
+        timeout: 3000,
+        backgroundColor: '#ffa000',
+      });
+      return;
     }
-  });
 
-  emailInput.addEventListener('input', () => {
-    if (emailInput.value.trim() !== '' && emailInput.checkValidity()) {
-      errorText.classList.remove('visible');
-      emailInput.classList.remove('input-error');
-    }
+    form.reset();
   });
 });
