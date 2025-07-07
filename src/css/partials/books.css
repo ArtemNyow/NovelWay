@@ -31,8 +31,8 @@
 
 .dropdown {
   position: relative;
-  display: inline-block;
-
+  display: flex;
+  justify-content: end;
   margin: 0 auto 24px;
   width: 100%;
   max-width: 342px;
@@ -90,8 +90,7 @@
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #e15d05 transparent;
-
-  padding-right: 5px;
+  margin-top: 40px;
 }
 
 .dropdown-menu::-webkit-scrollbar {
