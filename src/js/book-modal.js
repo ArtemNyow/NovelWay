@@ -1,6 +1,5 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-// import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -11,12 +10,21 @@ const inputSum = document.querySelector('.form-input-sum');
 const plus = document.querySelector('.plus');
 const formBookModal = document.querySelector('.form-book-modal');
 const addToCartBtn = document.querySelector('.add-to-cart');
+// const btnBooks = document.querySelector('[data-id]');
 
-new Accordion('.accordion-container');
+new Accordion('.accordeon-container');
 
 inputSum.value = 1;
-let value;
+let value = 1;
 let number;
+
+// btnBooks.addEventListener('click', onModal);
+
+// function onModal(event) {
+//   backdrop.classList.add('is-open-book-modal');
+//   document.body.classList.add('no-scroll');
+//   inputSum.value = 1;
+// }
 
 closeBtn.addEventListener('click', closeModal);
 
@@ -35,6 +43,7 @@ document.addEventListener('keydown', event => {
 function closeModal(event) {
   backdrop.classList.remove('is-open-book-modal');
   document.body.classList.remove('no-scroll');
+  inputSum.value = 1;
 }
 
 minus.addEventListener('click', minusBtn);
