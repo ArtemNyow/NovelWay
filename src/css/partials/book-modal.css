@@ -117,7 +117,7 @@
   padding: 0;
 }
 
-.accordion-container {
+.accordeon-container {
   max-width: 311px;
   width: 100%;
 }
@@ -229,7 +229,7 @@
     margin-bottom: 24px;
   }
 
-  .accordion-container {
+  .accordeon-container {
     max-width: 307px;
     width: 100%;
   }
@@ -271,7 +271,7 @@
     margin-right: 24px;
   }
 
-  .accordion-container {
+  .accordeon-container {
     max-width: 759px;
     width: 100%;
   }
