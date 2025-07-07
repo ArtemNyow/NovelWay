@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 function initContactModal() {
   function openModal(eventName, eventId) {
     const modal = document.getElementById('contactModal');
@@ -37,6 +40,7 @@ function initContactModal() {
   function validateInput(input) {
     if (input.required && !input.value.trim()) {
       showError(input);
+      input.setCustomValidity('This field is required'); // Запобігання стандартній валідації
       return false;
     }
 
@@ -44,17 +48,39 @@ function initContactModal() {
       const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
       if (!emailPattern.test(input.value)) {
         showError(input);
+        input.setCustomValidity('Please enter a valid email address'); // Запобігання стандартній валідації
         return false;
       }
     }
 
+    input.setCustomValidity(''); // Очищення користувацької валідації, якщо введення є дійсним
     return true;
+  }
+
+  function showToastError(errorMessages) {
+    const message = errorMessages.join('<br/>');
+
+    iziToast.error({
+      title: 'Error',
+      message: message,
+      position: 'topRight',
+      timeout: 5000,
+    });
+  }
+
+  function showToastSuccess() {
+    iziToast.success({
+      title: 'Success',
+      message: 'Registration successful!',
+      position: 'topRight',
+      timeout: 5000,
+    });
   }
 
   function closeModal() {
     const modal = document.getElementById('contactModal');
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Повернення прокрутки сторінки
+    document.body.style.overflow = 'auto'; // Відновлення прокрутки сторінки
     document.getElementById('contactForm').reset();
     clearFormErrors();
   }
@@ -67,7 +93,10 @@ function initContactModal() {
     '.input-wrapper input, .input-wrapper textarea'
   );
 
-  // Закриття модального вікна при кліку на тло
+  // Запобігання стандартній валідації браузера шляхом додавання novalidate до форми
+  contactForm.setAttribute('novalidate', true);
+
+  // Закриття модального вікна при кліку поза його межами
   modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
   });
@@ -83,15 +112,29 @@ function initContactModal() {
   // Відправка форми
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
+    clearFormErrors();
+
     let isValid = true;
+    let errorMessages = []; // Збір повідомлень про помилки
 
     inputs.forEach(input => {
       if (!validateInput(input)) {
         isValid = false;
+        const wrapper = input.closest('.input-wrapper');
+        const errorText = wrapper.querySelector(
+          '.error-text-input, .error-text-textarea'
+        );
+
+        if (errorText && errorText.textContent) {
+          errorMessages.push(errorText.textContent); // Збір повідомлень про помилки, якщо текст присутній
+        }
       }
     });
 
-    if (!isValid) return;
+    if (!isValid) {
+      showToastError(errorMessages); // Відображення всіх повідомлень про помилки за допомогою iziToast
+      return;
+    }
 
     const formData = {
       eventId: document.getElementById('eventId').value,
@@ -102,10 +145,11 @@ function initContactModal() {
     };
 
     console.log('Form submitted:', formData);
+    showToastSuccess();
     closeModal();
   });
 
-  // Валідація вводу
+  // Валідація введення при втраті фокусу та зміні введення
   inputs.forEach(input => {
     input.addEventListener('blur', () => validateInput(input));
     input.addEventListener('input', () => {
@@ -115,7 +159,6 @@ function initContactModal() {
     });
   });
 
-  // Відкриття доступу функції openModal у глобальну область видимості
   window.openModal = openModal;
 }
 
