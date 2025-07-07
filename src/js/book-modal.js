@@ -1,6 +1,8 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
 import iziToast from "izitoast";
+import 'izitoast/dist/css/iziToast.min.css';
+
 import { renderBookModal } from "./render-functions";
 import { refs } from "./refs";
 
@@ -13,7 +15,7 @@ function onEscPress(e) {
 export function openModalBook(bookData) {
   renderBookModal(bookData);
 
-  backdrop.classList.add("is-open-book-modal");
+  refs.backdrop.classList.add("is-open-book-modal");
   document.body.classList.add("no-scroll");
 
   new Accordion(".accordeon-container", {
@@ -26,10 +28,10 @@ export function openModalBook(bookData) {
   const addToCartBtn = refs.backdrop.querySelector(".add-to-cart");
   const formBookModal = refs.backdrop.querySelector(".form-book-modal");
   const closeBtn = refs.backdrop.querySelector(".close-btn");
-  
 
   inputSum.value = 1;
-
+  let value = 1;
+  let number;
   minus.addEventListener("click", () => {
     if (inputSum.value > 1) inputSum.value = +inputSum.value - 1;
   
@@ -40,43 +42,52 @@ export function openModalBook(bookData) {
     inputSum.value = +inputSum.value + 1;
   });
 
-  addToCartBtn.addEventListener("click", () => {
-    const val = inputSum.value.trim();
-    const num = Number(val);
-    if (!val || isNaN(num) || num < 1) {
-      iziToast.error({
-        message: "Ведіть корректний формат",
-        position: "topRight",
-      });
-      inputSum.value = 1;
-    } else {
-      iziToast.success({
-        message: `Кількість обраних товарів: ${num}`,
-        position: "topRight",
-      });
-    }
-  });
+  addToCartBtn.addEventListener('click', addToCart);
 
-  formBookModal.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const val = inputSum.value.trim();
-    const num = Number(val);
-    if (!val || isNaN(num) || num < 1) {
+  function addToCart(event) {
+    value = inputSum.value.trim();
+    number = Number(value);
+    if (!value || isNaN(number) || number < 1) {
       iziToast.error({
-        message: "Ведіть корректний формат",
-        position: "topRight",
+        message: 'Ведіть корректний формат',
+        position: 'topRight',
       });
       inputSum.value = 1;
+      return;
     } else {
       iziToast.success({
-        message: "Дякуємо за покупку",
-        position: "topRight",
+        message: `Кількість обраних товарів: ${number}`,
+        position: 'topRight',
       });
     }
-  });
+  }
+  
+  formBookModal.addEventListener('submit', buyNow);
+  
+  function buyNow(event) {
+    event.preventDefault();
+  
+    value = inputSum.value.trim();
+    number = Number(value);
+    if (!value || isNaN(number) || number < 1) {
+      iziToast.error({
+        message: 'Ведіть корректний формат',
+        position: 'topRight',
+      });
+      inputSum.value = 1;
+      alert('inputSum:'+ inputSum);
+
+      return;
+    } else {
+      iziToast.success({
+        message: 'Дякуємо за покупку',
+        position: 'topRight',
+      });
+    }
+  }
 
   closeBtn.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", (e) => {
+  refs.backdrop.addEventListener("click", (e) => {
     if (e.target === backdrop) closeModal();
   });
 
@@ -84,7 +95,7 @@ export function openModalBook(bookData) {
 }
 
 function closeModal() {
-  backdrop.classList.remove("is-open-book-modal");
+  refs.backdrop.classList.remove("is-open-book-modal");
   document.body.classList.remove("no-scroll");
   backdrop.innerHTML = "";
 

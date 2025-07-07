@@ -73,14 +73,11 @@ export async function handleCategorySelect(event) {
     const btn = event.target.closest(".btn-books");
     if (!btn) return;
   
-      const bookId = btn.dataset.id;
-    if (!bookId) {
-      console.error("Не знайдено data-id у кнопки");
-      return;
-    }
+    const bookId = btn.dataset.id;
+    if (!bookId) return;
   
     try {
-        const bookData = await getBookById(bookId);
+      const bookData = await getBookById(bookId);
       openModalBook(bookData);
     } catch (error) {
       iziToast.error({
@@ -88,8 +85,8 @@ export async function handleCategorySelect(event) {
         position: "topRight",
       });
     }
-  }
-  
+  }  
+
 
   
 

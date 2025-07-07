@@ -1,5 +1,6 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const BASE_URL = 'https://books-backend.p.goit.global/books';
 
