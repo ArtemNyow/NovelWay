@@ -5,5 +5,5 @@ import './js/header';
 import './js/scroll-up';
 import './js/footer';
 import './js/feedback';
-
+import './js/book-modal';
 import './js/books';
