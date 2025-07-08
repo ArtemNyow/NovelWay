@@ -1,7 +1,8 @@
 .events {}
 
-.events-container{
+.events-container {
     margin-bottom: 64px;
+    width: 100%;
 }
 
 .events-text-container {
@@ -31,30 +32,41 @@
     font-size: 18px;
     line-height: 1.5;
     color: #0b0500;
+    max-width: 100%;
+}
+
+.events-swiper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .events-list {
-    gap: 24px;
+    display: flex;
     margin-bottom: 56px;
+    padding: 0;
+    list-style: none;
 }
 
 .events-list-item {
-    width: 100%; 
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .events-list-item-img {
+    width: 100%;
     border-radius: 16px;
+    margin-bottom: 24px;
+    display: block;
 }
 
-.events-list-item-text-container{
+.events-list-item-text-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     height: 220px;
 }
-
-.events-list-item-text-container-text {}
 
 .events-list-item-format {
     font-weight: 400;
@@ -86,51 +98,45 @@
     line-height: 1.5;
     color: #0b0500;
     border: none;
-    background-color: transparent; 
+    background-color: transparent;
     fill: #0b0500;
     padding-left: 0;
+    cursor: pointer;
 }
 
-.button-icon{
+.button-icon {
     fill: #0b0500;
     width: 24px;
     height: 24px;
 }
 
-.swiper {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.swiper-wrapper {
+/* Унікальні стилі для кнопок навігації events swiper */
+.events-slider-controls {
     display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-bottom: 32px;
 }
 
-.swiper-slide {
-    flex-shrink: 0;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative; 
-}
-
-.slider-controls{
-    position: relative;
-}
-
-.slider-controls .swiper-button-prev,
-.slider-controls .swiper-button-next {
+.events-swiper-button-prev,
+.events-swiper-button-next {
     width: 48px;
     height: 48px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
 
-    position: static;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    margin-top: 0;
+.events-swiper-button-prev.disabled,
+.events-swiper-button-next.disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
 }
 
 .swiper-button-prev::after,
@@ -139,34 +145,49 @@
     content: none;
 }
 
-@media screen and (min-width: 374px){
-    .events-container{
-        max-width: 343px;
+/* Адаптивність */
+
+@media screen and (min-width: 375px) {
+    .events-container {
+        width: 375px;
     }
-    
+
+
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .events-container {
-        max-width: 704px;
+        width: 768px;
     }
 
-    .events-list{
+    .events-list {
         margin-bottom: 32px;
+        spaceBetween: 0,
     }
+
+
 
     .events-text-container-text {
-        width: 560px;
+        max-width: 560px;
     }
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1440px) {
     .events-container {
-            max-width: 1312px;
+        width: 1440px;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        display: none !important;
+
+    /* Ховаємо кнопки навігації на широких екранах */
+    .events-slider-controls {
+        display: none;
     }
+
+    .events-list-item {
+        width: 421px;
+        flex-shrink: 0;
+    }
+
+
+
 }
