@@ -27,7 +27,7 @@
   border-radius: 16px;
   padding: 64px 16px;
   position: relative;
-  background-color: #fceee6;
+  background-color: #FCEEE6;
 }
 
 .btn-icon-close {
@@ -50,14 +50,14 @@
   font-size: 40px;
   line-height: 120%;
   letter-spacing: -0.01em;
-  color: #0b0500;
+  color: #0B0500;
   margin-top: 24px;
   margin-bottom: 8px;
 }
 
 .book-modal-text {
   font-size: 14px;
-  color: #0b0500;
+  color: #0B0500;
   margin-bottom: 8px;
 }
 
@@ -65,7 +65,7 @@
   font-size: 24px;
   line-height: 140%;
   letter-spacing: -0.01em;
-  color: #0b0500;
+  color: #0B0500;
   margin-bottom: 24px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .btn-icon {
-  border: 1px solid #0b0500;
+  border: 1px solid #0B0500;
   padding: 0;
   max-width: 32px;
   width: 100%;
@@ -85,7 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #0b0500;
+  fill: #0B0500;
   background-color: inherit;
 }
 
@@ -94,13 +94,14 @@
   width: 100%;
   max-width: 42px;
   height: 40px;
+  text-align: center;
+  padding: 0;
 }
 
 .form-btn-book-modal {
   display: block;
   margin: 0 auto;
   padding: 12px auto;
-
   width: 100%;
   height: 48px;
   margin-bottom: 24px;
@@ -121,36 +122,39 @@
   width: 100%;
 }
 
-.ac {
-  background-color: inherit !important;
+.accordeon-container .ac {
+  background-color: inherit;
 }
 
-.ac-item {
-  border-top: 1px solid rgba(11, 5, 0, 0.15) !important;
+.accordeon-container .ac-item {
+  border-top: 1px solid rgba(11, 5, 0, 0.15);
 }
 
 .ac:last-child {
   border-bottom: 1px solid rgba(11, 5, 0, 0.15);
 }
 
+.accordeon-container .ac-trigger {
+  padding-left: 0;
+}
+
+.ac .ac-trigger::after {
+  display: none;
+}
+
 .ac-trigger {
   font-weight: 600;
   font-size: 18px;
-  color: #0b0500;
+  color: #0B0500;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 0 !important;
   max-width: 311px;
   width: 100%;
   height: 59px;
-}
-
-.ac .ac-trigger::after {
-  display: none !important;
 }
 
 .ac-trigger .icon-down {
@@ -175,7 +179,7 @@
 }
 
 .book-modal-item-text {
-  color: #0b0500;
+  color: #0B0500;
   margin-bottom: 24px;
 }
 
@@ -255,6 +259,7 @@
     top: 16px;
     right: 16px;
   }
+
   .form-book-quantity {
     margin-bottom: 16px;
   }

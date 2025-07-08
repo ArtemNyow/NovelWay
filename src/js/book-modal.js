@@ -1,103 +1,103 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
-import iziToast from 'izitoast';
+import Accordion from "accordion-js";
+import "accordion-js/dist/accordion.min.css";
+import iziToast from "izitoast";
 import 'izitoast/dist/css/iziToast.min.css';
 
-const backdrop = document.querySelector('.backdrop');
-const closeBtn = document.querySelector('.btn-icon-close');
-const minus = document.querySelector('.minus');
-const inputSum = document.querySelector('.form-input-sum');
-const plus = document.querySelector('.plus');
-const formBookModal = document.querySelector('.form-book-modal');
-const addToCartBtn = document.querySelector('.add-to-cart');
-// const btnBooks = document.querySelector('[data-id]');
+import { renderBookModal } from "./render-functions";
+import { refs } from "./refs";
 
-new Accordion('.accordeon-container');
 
-inputSum.value = 1;
-let value = 1;
-let number;
 
-// btnBooks.addEventListener('click', onModal);
+function onEscPress(e) {
+  if (e.key === "Escape") closeModal();
+}
 
-// function onModal(event) {
-//   backdrop.classList.add('is-open-book-modal');
-//   document.body.classList.add('no-scroll');
-//   inputSum.value = 1;
-// }
+export function openModalBook(bookData) {
+  renderBookModal(bookData);
 
-closeBtn.addEventListener('click', closeModal);
+  refs.backdrop.classList.add("is-open-book-modal");
+  document.body.classList.add("no-scroll");
 
-backdrop.addEventListener('click', event => {
-  if (event.target === backdrop) {
-    closeModal();
-  }
-});
+  new Accordion(".accordeon-container", {
+    showMultiple: true, 
+  });
 
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    closeModal();
-  }
-});
+  const inputSum =refs.backdrop.querySelector(".form-input-sum");
+  const minus = refs.backdrop.querySelector(".minus");
+  const plus = refs.backdrop.querySelector(".plus");
+  const addToCartBtn = refs.backdrop.querySelector(".add-to-cart");
+  const formBookModal = refs.backdrop.querySelector(".form-book-modal");
+  const closeBtn = refs.backdrop.querySelector(".close-btn");
 
-function closeModal(event) {
-  backdrop.classList.remove('is-open-book-modal');
-  document.body.classList.remove('no-scroll');
   inputSum.value = 1;
-}
+  let value = 1;
+  let number;
+  minus.addEventListener("click", () => {
+    if (inputSum.value > 1) inputSum.value = +inputSum.value - 1;
+  
+    
+  });
 
-minus.addEventListener('click', minusBtn);
+  plus.addEventListener("click", () => {
+    inputSum.value = +inputSum.value + 1;
+  });
 
-function minusBtn(event) {
-  if (inputSum.value > 1) {
-    inputSum.value = +inputSum.value - 1;
+  addToCartBtn.addEventListener('click', addToCart);
+
+  function addToCart(event) {
+    value = inputSum.value.trim();
+    number = Number(value);
+    if (!value || isNaN(number) || number < 1) {
+      iziToast.error({
+        message: 'Ведіть корректний формат',
+        position: 'topRight',
+      });
+      inputSum.value = 1;
+      return;
+    } else {
+      iziToast.success({
+        message: `Кількість обраних товарів: ${number}`,
+        position: 'topRight',
+      });
+    }
   }
-}
+  
+  formBookModal.addEventListener('submit', buyNow);
+  
+  function buyNow(event) {
+    event.preventDefault();
+  
+    value = inputSum.value.trim();
+    number = Number(value);
+    if (!value || isNaN(number) || number < 1) {
+      iziToast.error({
+        message: 'Ведіть корректний формат',
+        position: 'topRight',
+      });
+      inputSum.value = 1;
+      alert('inputSum:'+ inputSum);
 
-plus.addEventListener('click', plusBtn);
-
-function plusBtn(event) {
-  inputSum.value = +inputSum.value + 1;
-}
-
-addToCartBtn.addEventListener('click', addToCart);
-
-function addToCart(event) {
-  value = inputSum.value.trim();
-  number = Number(value);
-  if (!value || isNaN(number) || number < 1) {
-    iziToast.error({
-      message: 'Ведіть корректний формат',
-      position: 'topRight',
-    });
-    inputSum.value = 1;
-    return;
-  } else {
-    iziToast.success({
-      message: `Кількість обраних товарів: ${number}`,
-      position: 'topRight',
-    });
+      return;
+    } else {
+      iziToast.success({
+        message: 'Дякуємо за покупку',
+        position: 'topRight',
+      });
+    }
   }
+
+  closeBtn.addEventListener("click", closeModal);
+  refs.backdrop.addEventListener("click", (e) => {
+    if (e.target === refs.backdrop) closeModal();
+  });
+
+  document.addEventListener("keydown", onEscPress);
 }
 
-formBookModal.addEventListener('submit', buyNow);
+function closeModal() {
+  refs.backdrop.classList.remove("is-open-book-modal");
+  document.body.classList.remove("no-scroll");
+  refs.backdrop.innerHTML = "";
 
-function buyNow(event) {
-  event.preventDefault();
-
-  value = inputSum.value.trim();
-  number = Number(value);
-  if (!value || isNaN(number) || number < 1) {
-    iziToast.error({
-      message: 'Ведіть корректний формат',
-      position: 'topRight',
-    });
-    inputSum.value = 1;
-    return;
-  } else {
-    iziToast.success({
-      message: 'Дякуємо за покупку',
-      position: 'topRight',
-    });
-  }
+  document.removeEventListener("keydown", onEscPress);
 }

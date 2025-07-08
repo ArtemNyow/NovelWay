@@ -13,256 +13,27 @@
           </div>
           <!-- селект категорій -->
           <div class="books__controls">
-            <label for="books-category" class="visually-hidden"
-              >Categories</label
-            >
-            <div class="books__select-wrapper">
-              <select id="books-category" class="books__select">
-                <option value="" disabled selected>Categories</option>
-                <option value="all">All categories</option>
-                <option value="combined-print-ebook-fiction">
-                  Combined Print &amp; E-book Fiction
-                </option>
-                <option value="combined-print-ebook-nonfiction">
-                  Combined Print &amp; E-book Nonfiction
-                </option>
-                <option value="hardcover-fiction">Hardcover fiction</option>
-                <option value="paperback-trade-fiction">
-                  Paperback trade fiction
-                </option>
-                <option value="paperback-nonfiction">
-                  Paperback nonfiction
-                </option>
-                <option value="advice-how-to-misc">
-                  Advice, how-to &amp; Miscellaneous
-                </option>
-                <option value="childrens-middle-grade">
-                  Children’s middle grade hardcover
-                </option>
-              </select>
-              <svg class="books__select-icon" width="24" height="24">
-                <use href="../img/sprite.svg#icon-chevron-down"></use>
-              </svg>
+            <!-- селект категорій -->
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span class="dropdown-label">Categories</span>
+                <svg class="icon-chevron-down" width="24" height="24">
+                  <use href="/img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <ul class="dropdown-menu"></ul>
             </div>
           </div>
         </div>
         <!-- список посилань для десктопу -->
-        <div class="books__options">
-          <ul class="books__options">
-            <li class="books__option-item">
-              <a id="all" href="#" class="books__option">All categories</a>
-            </li>
-            <li class="books__option-item">
-              <a
-                id="combined-print-ebook-fiction"
-                href="#"
-                class="books__option"
-              >
-                Combined Print &amp; E-book Fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a
-                id="combined-print-ebook-nonfiction"
-                href="#"
-                class="books__option"
-              >
-                Combined Print &amp; E-book Nonfiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="hardcover-fiction" href="#" class="books__option">
-                Hardcover fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="paperback-trade-fiction" href="#" class="books__option">
-                Paperback trade fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="paperback-nonfiction" href="#" class="books__option">
-                Paperback nonfiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="advice-how-to-misc" href="#" class="books__option">
-                Advice, how-to &amp; Miscellaneous
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="childrens-middle-grade" href="#" class="books__option">
-                Children’s middle grade hardcover
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="books__options"></ul>
       </div>
       <!-- список книг -->
       <div class="books-desktop__btn_align">
-        <ul id="books-list" class="books__list">
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-        </ul>
+        <ul id="books-list" class="books__list"></ul>
+        <div id="books-loader" class="books__loader is-hidden">
+          <div class="books__loader-spinner"></div>
+        </div>
         <!-- кнопка «Show More»  -->
         <div class="books__more-wrap">
           <button id="books-more" class="btn-orange books__more-btn is-hidden">
