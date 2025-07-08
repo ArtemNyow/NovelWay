@@ -37,7 +37,7 @@ import{i as m,S as A,N as M,P as j,K as W,a as I,A as K}from"./assets/vendor-Bre
       <div class="book-modal-images">
         <button class="close-btn btn-icon-close" type="button">
           <svg class="icon-close" width="14" height="14">
-            <use href="/img/sprite.svg#icon-close-btn"></use>
+            <use href="./img/sprite.svg#icon-close-btn"></use>
           </svg>
         </button>
         <img
@@ -56,13 +56,13 @@ import{i as m,S as A,N as M,P as j,K as W,a as I,A as K}from"./assets/vendor-Bre
           <div class="form-book-quantity">
             <button class="btn-icon minus" type="button">
               <svg class="icon-price-minus" width="14" height="14">
-                <use href="/img/sprite.svg#icon-minus"></use>
+                <use href="./img/sprite.svg#icon-minus"></use>
               </svg>
             </button>
             <input class="form-input-sum" maxlength="2" name="number" type="text" />
             <button class="btn-icon plus" type="button">
               <svg class="icon-price-plus" width="14" height="14">
-                <use href="/img/sprite.svg#icon-plus"></use>
+                <use href="./img/sprite.svg#icon-plus"></use>
               </svg>
             </button>
           </div>
@@ -83,10 +83,10 @@ import{i as m,S as A,N as M,P as j,K as W,a as I,A as K}from"./assets/vendor-Bre
             <button class="ac-trigger">
               Details
               <svg class="icon-down icon-down-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-down"></use>
+                <use href="./img/sprite.svg#icon-chevron-down"></use>
               </svg>
               <svg class="icon-down icon-up-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-up"></use>
+                <use href="./img/sprite.svg#icon-chevron-up"></use>
               </svg>
             </button>
             <div class="ac-panel">
@@ -99,10 +99,10 @@ import{i as m,S as A,N as M,P as j,K as W,a as I,A as K}from"./assets/vendor-Bre
             <button class="ac-trigger">
               Shipping
               <svg class="icon-down icon-down-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-down"></use>
+                <use href="./img/sprite.svg#icon-chevron-down"></use>
               </svg>
               <svg class="icon-down icon-up-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-up"></use>
+                <use href="./img/sprite.svg#icon-chevron-up"></use>
               </svg>
             </button>
             <div class="ac-panel">
@@ -117,10 +117,10 @@ import{i as m,S as A,N as M,P as j,K as W,a as I,A as K}from"./assets/vendor-Bre
             <button class="ac-trigger">
               Returns
               <svg class="icon-down icon-down-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-down"></use>
+                <use href="./img/sprite.svg#icon-chevron-down"></use>
               </svg>
               <svg class="icon-down icon-up-hidden" width="24" height="24">
-                <use href="/img/sprite.svg#icon-chevron-up"></use>
+                <use href="./img/sprite.svg#icon-chevron-up"></use>
               </svg>
             </button>
             <div class="ac-panel">
