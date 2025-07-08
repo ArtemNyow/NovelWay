@@ -22,28 +22,35 @@ const eventsSwiper = new Swiper('.events-swiper', {
     768: {
       slidesPerView: 2,
       spaceBetween: 24,
+ 
     },
     1440: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 24,
-      allowSlideNext: false,
-      noSwiping: true
+      
     },
   },
   on: {
     init: updateButtonsState,
     slideChange: updateButtonsState,
-    resize: updateButtonsState 
+    resize: function() {
+      this.update(); 
+      updateButtonsState(this);
+    }
   },
 });
 
 function updateButtonsState(swiper) {
   const prevBtn = document.querySelector('.events-swiper-button-prev');
   const nextBtn = document.querySelector('.events-swiper-button-next');
-
+  
   if (!prevBtn || !nextBtn) return;
-
-  // Використовуємо стандартні класи Swiper
+  
+  const totalSlides = swiper.slides.length;
+  
+  const visibleSlides = swiper.params.slidesPerView;
+  
   if (swiper.isBeginning) {
     prevBtn.classList.add('swiper-button-disabled');
     prevBtn.setAttribute('aria-disabled', 'true');
@@ -51,12 +58,17 @@ function updateButtonsState(swiper) {
     prevBtn.classList.remove('swiper-button-disabled');
     prevBtn.setAttribute('aria-disabled', 'false');
   }
-
-  if (swiper.isEnd) {
+  
+  if (totalSlides <= visibleSlides) {
     nextBtn.classList.add('swiper-button-disabled');
     nextBtn.setAttribute('aria-disabled', 'true');
   } else {
-    nextBtn.classList.remove('swiper-button-disabled');
-    nextBtn.setAttribute('aria-disabled', 'false');
+    if (swiper.isEnd) {
+      nextBtn.classList.add('swiper-button-disabled');
+      nextBtn.setAttribute('aria-disabled', 'true');
+    } else {
+      nextBtn.classList.remove('swiper-button-disabled');
+      nextBtn.setAttribute('aria-disabled', 'false');
+    }
   }
 }

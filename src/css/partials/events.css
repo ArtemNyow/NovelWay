@@ -186,16 +186,12 @@
     }
 
 
-
-    .events-swiper {
-        overflow: hidden !important;
+    .events-slider-controls {
+        display: none;
     }
 
-    /* 
-    .swiper-wrapper {
-        transform: translate3d(0px, 0, 0) !important;
-        transition-duration: 0ms !important;
-    } */
+
+
 
 
 }
