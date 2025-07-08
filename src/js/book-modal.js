@@ -31,7 +31,7 @@ export function openModalBook(bookData) {
   let value = 1;
   let number;
   minus.addEventListener('click', () => {
-    if (inputSum.value > 1) {
+    if (+inputSum.value > 1) {
       inputSum.value = +inputSum.value - 1;
     } else {
       iziToast.error({
@@ -44,7 +44,7 @@ export function openModalBook(bookData) {
   });
 
   plus.addEventListener('click', () => {
-    if (inputSum.value > 1) {
+    if (+inputSum.value >= 1) {
       inputSum.value = +inputSum.value + 1;
     } else {
       iziToast.error({
