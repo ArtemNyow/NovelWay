@@ -191,3 +191,6 @@ export function renderBookModal(book) {
     refs.backdrop.innerHTML = "";
     refs.backdrop.insertAdjacentHTML("beforeend",markupModal(book))
 }
+
+
+

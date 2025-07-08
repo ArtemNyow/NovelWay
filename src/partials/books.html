@@ -21,72 +21,7 @@
                   <use href="/img/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="All categories"
-                    >All categories</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Combined Print and E-book Fiction"
-                    >Combined Print and E-book Fiction</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Combined Print & E-book Nonfiction"
-                    >Combined Print & E-book Nonfiction</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Hardcover fiction"
-                    >Hardcover fiction</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Paperback trade fiction"
-                    >Paperback trade fiction</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Paperback nonfiction"
-                    >Paperback nonfiction</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Advice, how-to & Miscellaneous"
-                    >Advice, how-to & Miscellaneous</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-menu-link"
-                    href="#"
-                    data-category="Children's middle grade hardcover"
-                    >Children's middle grade hardcover</a
-                  >
-                </li>
-              </ul>
+              <ul class="dropdown-menu"></ul>
             </div>
           </div>
         </div>
@@ -96,6 +31,9 @@
       <!-- список книг -->
       <div class="books-desktop__btn_align">
         <ul id="books-list" class="books__list"></ul>
+        <div id="books-loader" class="books__loader is-hidden">
+          <div class="books__loader-spinner"></div>
+        </div>
         <!-- кнопка «Show More»  -->
         <div class="books__more-wrap">
           <button id="books-more" class="btn-orange books__more-btn is-hidden">

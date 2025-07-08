@@ -1,3 +1,5 @@
+import { refs } from "./refs";
+
 (() => {
   const openBtn = document.querySelector('.js-open-menu');
   const closeBtn = document.querySelector('.js-close-menu');
@@ -35,3 +37,8 @@
     });
   });
 })();
+
+
+
+
+

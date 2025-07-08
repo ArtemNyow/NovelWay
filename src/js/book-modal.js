@@ -88,7 +88,7 @@ export function openModalBook(bookData) {
 
   closeBtn.addEventListener("click", closeModal);
   refs.backdrop.addEventListener("click", (e) => {
-    if (e.target === backdrop) closeModal();
+    if (e.target === refs.backdrop) closeModal();
   });
 
   document.addEventListener("keydown", onEscPress);
@@ -97,7 +97,7 @@ export function openModalBook(bookData) {
 function closeModal() {
   refs.backdrop.classList.remove("is-open-book-modal");
   document.body.classList.remove("no-scroll");
-  backdrop.innerHTML = "";
+  refs.backdrop.innerHTML = "";
 
   document.removeEventListener("keydown", onEscPress);
 }
