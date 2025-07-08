@@ -1,4 +1,4 @@
-import { refs } from "./refs";
+
 
 (() => {
   const openBtn = document.querySelector('.js-open-menu');
