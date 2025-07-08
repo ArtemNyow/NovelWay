@@ -99,9 +99,6 @@
   box-sizing: border-box;
 }
 
-.books-desktop__btn_align {
-  margin: 0 auto;
-}
 
 .dropdown-menu::-webkit-scrollbar {
   width: 5px;
@@ -361,6 +358,9 @@
 .books__loader {
   text-align: center;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   margin-top: 20px;
