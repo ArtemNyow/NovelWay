@@ -21,12 +21,14 @@ const swiper = new Swiper('.events-swiper', {
     1440: {
       slidesPerView: 3,
       spaceBetween: 24,
-      allowSlideNext:false
+      allowSlideNext: false,
+      noSwiping: true
     },
   },
   on: {
     init: updateButtonsState,
     slideChange: updateButtonsState,
+    resize: updateButtonsState 
   },
 });
 
@@ -36,19 +38,20 @@ function updateButtonsState(swiper) {
 
   if (!prevBtn || !nextBtn) return;
 
+  // Використовуємо стандартні класи Swiper
   if (swiper.isBeginning) {
-    prevBtn.disabled = true;
-    prevBtn.classList.add('disabled');
+    prevBtn.classList.add('swiper-button-disabled');
+    prevBtn.setAttribute('aria-disabled', 'true');
   } else {
-    prevBtn.disabled = false;
-    prevBtn.classList.remove('disabled');
+    prevBtn.classList.remove('swiper-button-disabled');
+    prevBtn.setAttribute('aria-disabled', 'false');
   }
 
   if (swiper.isEnd) {
-    nextBtn.disabled = true;
-    nextBtn.classList.add('disabled');
+    nextBtn.classList.add('swiper-button-disabled');
+    nextBtn.setAttribute('aria-disabled', 'true');
   } else {
-    nextBtn.disabled = false;
-    nextBtn.classList.remove('disabled');
+    nextBtn.classList.remove('swiper-button-disabled');
+    nextBtn.setAttribute('aria-disabled', 'false');
   }
 }
