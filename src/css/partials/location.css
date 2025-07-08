@@ -1,7 +1,7 @@
 .location-section {
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 106px;
+    padding-bottom: 64px;
 }
 
 .location-title {
@@ -136,4 +136,9 @@
     .location-descr {
         min-width: 732px;
     }
+
+    .location-section {
+        padding-bottom: 64px;
+    }
+
 }

@@ -54,7 +54,7 @@ export const renderCategoriesOption = async () => {
     const categoriesArr = await getCategories();
     const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
 
-    filtered.unshift({ list_name: 'Categories' })
+    filtered.unshift({ list_name: 'All categories' })
     refs.bookCategoryDropdown.insertAdjacentHTML('beforeend',markupCategoriesOption(filtered))
 }
 
@@ -164,10 +164,10 @@ export const markupModal = ({ book_image, title, author, price, description, pub
             <button class="ac-trigger">
               Returns
               <svg class="icon-down icon-down-hidden" width="24" height="24">
-                <use href="./img/sprite.svg#icon-chevron-down"></use>
+                <use href="/img/sprite.svg#icon-chevron-down"></use>
               </svg>
               <svg class="icon-down icon-up-hidden" width="24" height="24">
-                <use href="./img/sprite.svg#icon-chevron-up"></use>
+                <use href="/img/sprite.svg#icon-chevron-up"></use>
               </svg>
             </button>
             <div class="ac-panel">
