@@ -1,0 +1,198 @@
+.events {}
+
+.events-container {
+    margin-bottom: 64px;
+    width: 100%;
+}
+
+.events-text-container {
+    margin-bottom: 32px;
+}
+
+.events-text-container-prevtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #0b0500;
+    margin-bottom: 16px;
+}
+
+.events-text-container-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #0b0500;
+    margin-bottom: 16px;
+}
+
+.events-text-container-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #0b0500;
+    max-width: 100%;
+}
+
+.events-swiper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.events-list {
+    display: flex;
+    margin-bottom: 56px;
+    padding: 0;
+    list-style: none;
+}
+
+.events-list-item {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.events-list-item-img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.events-list-item-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 220px;
+}
+
+.events-list-item-format {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+    margin-bottom: 8px;
+}
+
+.events-list-item-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: #0b0500;
+}
+
+.events-list-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+    margin-bottom: 16px;
+}
+
+.events-list-item-btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+    border: none;
+    background-color: transparent;
+    fill: #0b0500;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.button-icon {
+    fill: #0b0500;
+    width: 24px;
+    height: 24px;
+}
+
+/* Унікальні стилі для кнопок навігації events swiper */
+.events-slider-controls {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+}
+
+.events-swiper .swiper-button-next,
+.events-swiper .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-swiper-button-prev.disabled,
+.events-swiper-button-next.disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+    content: none;
+}
+
+/* Адаптивність */
+
+@media screen and (min-width: 375px) {
+    .events-container {
+        width: 375px;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .events-container {
+        width: 768px;
+    }
+
+    .events-list {
+        margin-bottom: 32px;
+        spaceBetween: 0,
+    }
+
+
+
+    .events-text-container-text {
+        max-width: 560px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .events-container {
+        width: 1440px;
+    }
+
+
+    /* Ховаємо кнопки навігації на широких екранах */
+    .events-slider-controls {
+        display: none;
+    }
+
+    .events-list-item {
+        width: 421px;
+        flex-shrink: 0;
+    }
+
+    .events-swiper {
+        overflow: hidden !important;
+    }
+
+    .swiper-wrapper {
+        transform: translate3d(0px, 0, 0) !important;
+        transition-duration: 0ms !important;
+    }
+
+
+}
