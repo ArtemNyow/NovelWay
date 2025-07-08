@@ -1,6 +1,7 @@
 .location-section {
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 106px;
 }
 
 .location-title {
@@ -114,14 +115,14 @@
 
 @media screen and (min-width: 1440px) {
     .map-frame {
-            width: 1312px;
-            height: 738px;
-        }
+        width: 1312px;
+        height: 738px;
+    }
 
     .location-section {
-            width: 1440px;
-            height: 1232px;
-        }
+        width: 1440px;
+        height: 1232px;
+    }
 
     .location-container {
         gap: 80px;
@@ -129,7 +130,7 @@
     }
 
     .location-text {
-       min-width: 732px;
+        min-width: 732px;
     }
 
     .location-descr {

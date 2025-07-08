@@ -1,7 +1,7 @@
 .events {}
 
 .events-container {
-    margin-bottom: 64px;
+
     width: 100%;
 }
 
@@ -43,7 +43,6 @@
 
 .events-list {
     display: flex;
-    margin-bottom: 56px;
     padding: 0;
     list-style: none;
 }
@@ -165,10 +164,6 @@
         width: 768px;
     }
 
-    .events-list {
-        margin-bottom: 32px;
-        spaceBetween: 0,
-    }
 
 
 
@@ -192,6 +187,8 @@
         width: 421px;
         flex-shrink: 0;
     }
+
+
 
     .events-swiper {
         overflow: hidden !important;

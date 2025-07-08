@@ -1,6 +1,7 @@
 .books {
   width: 100%;
-  margin: 12px auto;
+  margin: 0 auto;
+  padding: 32px 0;
 }
 
 .books__header {
@@ -246,7 +247,7 @@
 
 @media only screen and (min-width: 768px) {
   .books {
-    margin: 40px auto;
+    margin: 0 auto;
     width: 768px;
   }
 
@@ -298,6 +299,7 @@
 @media only screen and (min-width: 1440px) {
   .books {
     width: 1440px;
+
   }
 
   .books-desktop__correct {

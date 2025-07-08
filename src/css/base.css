@@ -35,3 +35,7 @@ a:hover,
 a:focus {
   opacity: 0.2;
 }
+
+section {
+  padding: 64px 0;
+}
