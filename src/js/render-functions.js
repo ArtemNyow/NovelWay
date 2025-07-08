@@ -1,11 +1,11 @@
-import { getCategories } from "./api/bookApi"
-import { refs } from "./refs";
-
+import { getCategories } from './api/bookApi';
+import { refs } from './refs';
 
 
 export const markupBooks = books => {
-    return books.map(
-        ({ _id, book_image, title, author,price }) => `<li class="books__item">
+  return books
+    .map(
+      ({ _id, book_image, title, author, price }) => `<li class="books__item">
             <article class="book-card">
               <div class="book-card__thumb">
                 <img
@@ -28,16 +28,17 @@ export const markupBooks = books => {
               </button>
             </article>
           </li>`
-    ).join('');
-}
+    )
+    .join('');
+};
 export const renderBooksList = books => {
-    refs.bookList.insertAdjacentHTML('beforeend',markupBooks(books))
-}
-
+  refs.bookList.insertAdjacentHTML('beforeend', markupBooks(books));
+};
 
 export const markupCategoriesOption = categoris => {
-    return categoris.map(
-        ({ list_name }) =>
+  return categoris
+    .map(
+      ({ list_name }) =>
         `
          <li>
                   <a
@@ -48,39 +49,53 @@ export const markupCategoriesOption = categoris => {
                     >${list_name}</a
                   >
                 </li>`
-    ).join('');
-}
+    )
+    .join('');
+};
 
 export const renderCategoriesOption = async () => {
-    const categoriesArr = await getCategories();
-    const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
+  const categoriesArr = await getCategories();
+  const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== '');
 
-    filtered.unshift({ list_name: 'All categories' })
-    refs.bookCategoryDropdown.insertAdjacentHTML('beforeend',markupCategoriesOption(filtered))
-}
+  filtered.unshift({ list_name: 'All categories' });
+  refs.bookCategoryDropdown.insertAdjacentHTML(
+    'beforeend',
+    markupCategoriesOption(filtered)
+  );
+};
 
 export const markupCategories = categoris => {
-    return categoris.map(
-        ({ list_name }) =>
-            `<li class="books__option-item">
+  return categoris
+    .map(
+      ({ list_name }) =>
+        `<li class="books__option-item">
             <a id="childrens-middle-grade" href="#" class="books__option" data-category="${list_name}">${list_name}
             </a>
           </li>`
-    ).join('');
-}
+    )
+    .join('');
+};
 
 export const renderCategories = async () => {
-    const categoriesArr = await getCategories();
-    const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== "");
+  const categoriesArr = await getCategories();
+  const filtered = categoriesArr.filter(cat => cat.list_name.trim() !== '');
 
-    filtered.unshift({ list_name: 'All categories' })
-    refs.bookCategory.insertAdjacentHTML('beforeend',markupCategories(filtered))
-}
+  filtered.unshift({ list_name: 'All categories' });
+  refs.bookCategory.insertAdjacentHTML('beforeend', markupCategories(filtered));
+};
 
-export const markupModal = ({ book_image, title, author, price, description, publisher }) => {
-    const descriptionText = description && description.trim() !== '' ? description : publisher;
-  
-    return `
+export const markupModal = ({
+  book_image,
+  title,
+  author,
+  price,
+  description,
+  publisher,
+}) => {
+  const descriptionText =
+    description && description.trim() !== '' ? description : publisher;
+
+  return `
     <div class="book-modal">
       <div class="book-modal-images">
         <button class="close-btn btn-icon-close" type="button">
@@ -184,14 +199,9 @@ export const markupModal = ({ book_image, title, author, price, description, pub
       </div>
     </div>
     `;
-  };
-  
-  
+};
 
 export function renderBookModal(book) {
-    refs.backdrop.innerHTML = "";
-    refs.backdrop.insertAdjacentHTML("beforeend",markupModal(book))
+  refs.backdrop.innerHTML = '';
+  refs.backdrop.insertAdjacentHTML('beforeend', markupModal(book));
 }
-
-
-
