@@ -80,6 +80,24 @@ a .banner-btn:focus {
   width: 100%;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-left: auto;
+}
+
 .slider-controls .swiper-button-prev,
 .slider-controls .swiper-button-next {
   width: 48px;
@@ -149,25 +167,8 @@ a .banner-btn:focus {
     );
   }
 
-  .title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-  }
-
   .hero-title {
     width: 343px;
-  }
-
-  .slider-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 16px;
-    margin-left: auto;
   }
 }
 
