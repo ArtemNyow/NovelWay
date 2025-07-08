@@ -32,7 +32,7 @@ export async function loadBooksForCategory(categoryName) {
   showBooksLoader();
   await Promise.resolve();
   try {
-    if (categoryName === 'Categories' || categoryName === 'All categories') {
+    if (categoryName === 'All categories') {
       const allBooks = await initAllBooks();
 
       if (allBooks.length > 24) {

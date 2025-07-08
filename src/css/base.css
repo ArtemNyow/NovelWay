@@ -18,8 +18,6 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
   margin: 0;
 }
 
@@ -34,4 +32,8 @@ main:has(.back-link) {
 a:hover,
 a:focus {
   opacity: 0.2;
+}
+
+section {
+  padding: 64px 0;
 }

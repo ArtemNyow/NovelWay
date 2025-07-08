@@ -19,7 +19,6 @@
 }
 
 .user-feedback-swiper {
-    padding-bottom: 32px;
     overflow: hidden;
 }
 
@@ -91,7 +90,11 @@
 
 @media screen and (min-width: 375px) {
     .feedback-container {
-        width: 375px; 
+        width: 375px;
+    }
+
+    .user-feedback-author {
+        margin-bottom: 70px;
     }
 }
 
@@ -103,6 +106,10 @@
     .user-feedback-item {
         width: calc((100% - 24px) / 2);
         height: 244px;
+    }
+
+    .user-feedback-author {
+        margin-bottom: 0;
     }
 }
 

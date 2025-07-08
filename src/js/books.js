@@ -1,6 +1,6 @@
 import { getCategories, getBooksByCategory } from "./api/bookApi";
 import { hideBooksLoader, showBooksLoader, updateBooksCounters } from "./helped";
-import { handleBookButtonClick, handleCategoryClick, handleCategorySelect } from "./hendlers";
+import { handleBookButtonClick, handleCategoryClick, handleCategorySelect } from "./handlers";
 import { refs } from "./refs";
 import { renderBooksList, renderCategories, renderCategoriesOption,   } from "./render-functions";
 

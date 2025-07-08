@@ -1,7 +1,5 @@
-.events {}
-
 .events-container {
-    margin-bottom: 64px;
+
     width: 100%;
 }
 
@@ -43,7 +41,6 @@
 
 .events-list {
     display: flex;
-    margin-bottom: 56px;
     padding: 0;
     list-style: none;
 }
@@ -110,12 +107,11 @@
     height: 24px;
 }
 
-/* Унікальні стилі для кнопок навігації events swiper */
 .events-slider-controls {
     display: flex;
     gap: 16px;
     justify-content: flex-end;
-    margin-bottom: 32px;
+
 }
 
 .events-swiper .swiper-button-next,
@@ -165,10 +161,6 @@
         width: 768px;
     }
 
-    .events-list {
-        margin-bottom: 32px;
-        spaceBetween: 0,
-    }
 
 
 
@@ -193,14 +185,17 @@
         flex-shrink: 0;
     }
 
+
+
     .events-swiper {
         overflow: hidden !important;
     }
 
+    /* 
     .swiper-wrapper {
         transform: translate3d(0px, 0, 0) !important;
         transition-duration: 0ms !important;
-    }
+    } */
 
 
 }
