@@ -1,0 +1,46 @@
+<section id="books-section" class="books" id="books">
+  <div class="container">
+    <!-- заголовок і число книг -->
+    <div class="books-desktop__correct">
+      <div class="books-desktop__header">
+        <div class="books-header__main">
+          <div class="books__header">
+            <h2 class="books__title">Books</h2>
+            <span class="books__counter"
+              >Showing <span id="books-count">0</span> of
+              <span id="books-total">0</span></span
+            >
+          </div>
+          <!-- селект категорій -->
+          <div class="books__controls">
+            <!-- селект категорій -->
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span class="dropdown-label">Categories</span>
+                <svg class="icon-chevron-down" width="24" height="24">
+                  <use href="/img/sprite.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <ul class="dropdown-menu"></ul>
+            </div>
+          </div>
+        </div>
+        <!-- список посилань для десктопу -->
+        <ul class="books__options"></ul>
+      </div>
+      <!-- список книг -->
+      <div class="books-desktop__btn_align">
+        <ul id="books-list" class="books__list"></ul>
+        <div id="books-loader" class="books__loader is-hidden">
+          <div class="books__loader-spinner"></div>
+        </div>
+        <!-- кнопка «Show More»  -->
+        <div class="books__more-wrap">
+          <button id="books-more" class="btn-orange books__more-btn is-hidden">
+            Show More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
