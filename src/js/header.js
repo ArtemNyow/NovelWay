@@ -1,20 +1,22 @@
-import { refs } from "./refs";
+import { refs } from './refs';
 
 (() => {
-  const openBtn = document.querySelector('.js-open-menu');
-  const closeBtn = document.querySelector('.js-close-menu');
-  const mobileMenu = document.querySelector('.js-menu');
+  const {
+    openMobileBtn,
+    closeMobileBtn,
+    mobileMenu,
+    navLinks,
+    mobileMenuContainer,
+  } = refs;
   const body = document.body;
-  const navLinks = document.querySelectorAll('.js-header-list-link');
-  const mobileMenuContainer = document.querySelector('.mobile-menu-container');
 
-  openBtn.addEventListener('click', () => {
+  openMobileBtn.addEventListener('click', () => {
     mobileMenu.classList.add('is-open');
     body.classList.add('no-scroll');
     mobileMenuContainer.classList.add('animate-in');
   });
 
-  closeBtn.addEventListener('click', () => {
+  closeMobileBtn.addEventListener('click', () => {
     mobileMenu.classList.remove('is-open');
     body.classList.remove('no-scroll');
     mobileMenuContainer.classList.remove('animate-in');
@@ -37,8 +39,3 @@ import { refs } from "./refs";
     });
   });
 })();
-
-
-
-
-
