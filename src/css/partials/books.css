@@ -41,7 +41,6 @@
 }
 
 .dropdown-toggle {
-
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -61,6 +60,7 @@
   color: #0b0500;
 
   cursor: pointer;
+  background: #dad9d8;
 }
 
 .dropdown-label {
@@ -88,17 +88,16 @@
   width: 100%;
   max-width: 342px;
   height: 296px;
-  background-color: rgb(255, 255, 255);
+  background: #dad9d8;
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   overflow-y: auto;
 
   margin-top: 44px;
-  padding-right: 10px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
 
 .dropdown-menu::-webkit-scrollbar {
   width: 5px;
@@ -107,23 +106,18 @@
 .dropdown-menu::-webkit-scrollbar-track {
   background: rgba(11, 5, 0, 0.15);
   border-radius: 4px;
+  border: 1px solid #000;
+  width: 3px;
 }
 
 .dropdown-menu::-webkit-scrollbar-thumb {
   background: #e15d05;
   border-radius: 4px;
   min-height: 47px;
+  width: 5px;
 }
 
 /* Для Firefox */
-.dropdown-menu {
-  scrollbar-width: thin;
-  scrollbar-color: #e15d05 rgba(11, 5, 0, 0.15);
-  overflow-y: scroll;
-}
-
-
-
 
 .dropdown-menu-link {
   display: block;
@@ -225,9 +219,6 @@
   color: #0b0500;
 }
 
-
-
-
 @media only screen and (min-width: 375px) {
   .books {
     width: 375px;
@@ -241,7 +232,6 @@
     width: 343px;
     height: 487px;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -353,8 +343,6 @@
   }
 }
 
-
-
 .books__loader {
   text-align: center;
   padding: 20px;
@@ -373,7 +361,6 @@
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
-
 }
 
 @keyframes spin {
