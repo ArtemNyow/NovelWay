@@ -1,5 +1,6 @@
 import { getCategories } from "./api/bookApi"
 import { refs } from "./refs";
+import spriteUrl from '/img/sprite.svg';
 
 
 
@@ -85,7 +86,7 @@ export const markupModal = ({ book_image, title, author, price, description, pub
       <div class="book-modal-images">
         <button class="close-btn btn-icon-close" type="button">
           <svg class="icon-close" width="14" height="14">
-            <use href="img/sprite.svg#icon-close-btn"></use>
+            <use href="${spriteUrl}#icon-close-btn"></use>
           </svg>
         </button>
         <img
@@ -104,7 +105,7 @@ export const markupModal = ({ book_image, title, author, price, description, pub
           <div class="form-book-quantity">
             <button class="btn-icon minus" type="button">
               <svg class="icon-price-minus" width="14" height="14">
-                <use href="img/sprite.svg#icon-minus"></use>
+                <use href="${spriteUrl}#icon-minus"></use>
               </svg>
             </button>
             <input class="form-input-sum" maxlength="2" name="number" type="text" />
