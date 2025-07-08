@@ -19,9 +19,9 @@
     />
     <title>Booksy</title>
     <script type="module" crossorigin src="/NovelWay/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/NovelWay/assets/vendor-CKp6ZtKK.js">
+    <link rel="modulepreload" crossorigin href="/NovelWay/assets/vendor-BreCM410.js">
     <link rel="stylesheet" crossorigin href="/NovelWay/assets/vendor-pdFqMe02.css">
-    <link rel="stylesheet" crossorigin href="/NovelWay/assets/index-CQwnAIz-.css">
+    <link rel="stylesheet" crossorigin href="/NovelWay/assets/index-B1sWFuca.css">
   </head>
   <body>
     <section class="header">
@@ -171,256 +171,27 @@
           </div>
           <!-- селект категорій -->
           <div class="books__controls">
-            <label for="books-category" class="visually-hidden"
-              >Categories</label
-            >
-            <div class="books__select-wrapper">
-              <select id="books-category" class="books__select">
-                <option value="" disabled selected>Categories</option>
-                <option value="all">All categories</option>
-                <option value="combined-print-ebook-fiction">
-                  Combined Print &amp; E-book Fiction
-                </option>
-                <option value="combined-print-ebook-nonfiction">
-                  Combined Print &amp; E-book Nonfiction
-                </option>
-                <option value="hardcover-fiction">Hardcover fiction</option>
-                <option value="paperback-trade-fiction">
-                  Paperback trade fiction
-                </option>
-                <option value="paperback-nonfiction">
-                  Paperback nonfiction
-                </option>
-                <option value="advice-how-to-misc">
-                  Advice, how-to &amp; Miscellaneous
-                </option>
-                <option value="childrens-middle-grade">
-                  Children’s middle grade hardcover
-                </option>
-              </select>
-              <svg class="books__select-icon" width="24" height="24">
-                <use href="../img/sprite.svg#icon-chevron-down"></use>
-              </svg>
+            <!-- селект категорій -->
+            <div class="dropdown">
+              <button class="dropdown-toggle">
+                <span class="dropdown-label">Categories</span>
+                <svg class="icon-chevron-down" width="24" height="24">
+                  <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-down"></use>
+                </svg>
+              </button>
+              <ul class="dropdown-menu"></ul>
             </div>
           </div>
         </div>
         <!-- список посилань для десктопу -->
-        <div class="books__options">
-          <ul class="books__options">
-            <li class="books__option-item">
-              <a id="all" href="#" class="books__option">All categories</a>
-            </li>
-            <li class="books__option-item">
-              <a
-                id="combined-print-ebook-fiction"
-                href="#"
-                class="books__option"
-              >
-                Combined Print &amp; E-book Fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a
-                id="combined-print-ebook-nonfiction"
-                href="#"
-                class="books__option"
-              >
-                Combined Print &amp; E-book Nonfiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="hardcover-fiction" href="#" class="books__option">
-                Hardcover fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="paperback-trade-fiction" href="#" class="books__option">
-                Paperback trade fiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="paperback-nonfiction" href="#" class="books__option">
-                Paperback nonfiction
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="advice-how-to-misc" href="#" class="books__option">
-                Advice, how-to &amp; Miscellaneous
-              </a>
-            </li>
-            <li class="books__option-item">
-              <a id="childrens-middle-grade" href="#" class="books__option">
-                Children’s middle grade hardcover
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="books__options"></ul>
       </div>
       <!-- список книг -->
       <div class="books-desktop__btn_align">
-        <ul id="books-list" class="books__list">
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-          <li class="books__item">
-            <article class="book-card">
-              <div class="book-card__thumb">
-                <img
-                  class="book-card__image"
-                  src="../img/books/test-image.jpg"
-                  alt=""
-                  width="343"
-                  height="487"
-                />
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__block">
-                  <h3 class="book-card__title">Spare</h3>
-                  <p class="book-card__author">Prince Harry</p>
-                </div>
-                <p class="book-card__price">$13</p>
-              </div>
-              <button class="btn-gray btn-books" type="button" data-id="">
-                Learn More
-              </button>
-            </article>
-          </li>
-        </ul>
+        <ul id="books-list" class="books__list"></ul>
+        <div id="books-loader" class="books__loader is-hidden">
+          <div class="books__loader-spinner"></div>
+        </div>
         <!-- кнопка «Show More»  -->
         <div class="books__more-wrap">
           <button id="books-more" class="btn-orange books__more-btn is-hidden">
@@ -772,116 +543,7 @@
   </div>
 </footer>
 
-    <div class="backdrop is-open-book-modal">
-  <div class="book-modal">
-    <div class="book-modal-images">
-      <button class="close-btn btn-icon-close" type="button">
-        <svg class="icon-close" width="14" height="14">
-          <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-close-btn"></use>
-        </svg>
-      </button>
-      <img
-        class="image-book-modal"
-        src="/NovelWay/assets/image-mobile-DFY4MO1y.jpg"
-        alt="I will find you"
-        width="309"
-        height="467"
-      />
-    </div>
-    <div class="book-modal-info">
-      <h2 class="book-modal-title">I will find you</h2>
-      <p class="book-modal-text">Harlan Coben</p>
-      <p class="book-modal-price">$15</p>
-      <form class="form-book-modal">
-        <div class="form-book-quantity">
-          <button class="btn-icon minus" type="button">
-            <svg class="icon-price-minus" width="14" height="14">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-minus"></use>
-            </svg>
-          </button>
-          <input class="form-input-sum" name="number" type="text" />
-          <button class="btn-icon plus" type="button">
-            <svg class="icon-price-plus" width="14" height="14">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-plus"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="form-buttons">
-          <button
-            class="form-btn-book-modal add-to-cart btn-gap btn-orange"
-            type="button"
-          >
-            Add To Cart
-          </button>
-          <button class="form-btn-book-modal buy-now btn-gray" type="submit">
-            Buy Now
-          </button>
-        </div>
-      </form>
-      <ul class="accordeon-container">
-        <li class="ac ac-item">
-          <button class="ac-trigger">
-            Details
-            <svg class="icon-down icon-down-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-down"></use>
-            </svg>
-            <svg class="icon-down icon-up-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-up"></use>
-            </svg>
-          </button>
-          <div class="ac-panel">
-            <p class="book-modal-item-text">
-              I Will Find You is a gripping thriller by the master of suspense,
-              Harlan Coben. The story follows David Burroughs, a former prisoner
-              wrongfully convicted of murdering his own son. When he discovers a
-              clue suggesting his son might still be alive, David escapes from
-              prison to uncover the truth. Fast-paced, emotional, and full of
-              unexpected twists — this novel will keep you hooked until the very
-              last page.
-            </p>
-          </div>
-        </li>
-        <li class="ac ac-item">
-          <button class="ac-trigger">
-            Shipping
-            <svg class="icon-down icon-down-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-down"></use>
-            </svg>
-            <svg class="icon-down icon-up-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-up"></use>
-            </svg>
-          </button>
-          <div class="ac-panel">
-            <p class="book-modal-item-text">
-              We ship across the United States within 2–5 business days. All
-              orders are processed through USPS or a reliable courier service.
-              Enjoy free standard shipping on orders over $50.
-            </p>
-          </div>
-        </li>
-        <li class="ac ac-item">
-          <button class="ac-trigger">
-            Returns
-            <svg class="icon-down icon-down-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-down"></use>
-            </svg>
-            <svg class="icon-down icon-up-hidden" width="24" height="24">
-              <use href="/NovelWay/assets/sprite-CW0ap_6O.svg#icon-chevron-up"></use>
-            </svg>
-          </button>
-          <div class="ac-panel">
-            <p class="book-modal-item-text">
-              You can return an item within 14 days of receiving your order,
-              provided it hasn’t been used and is in its original condition. To
-              start a return, please contact our support team — we’ll guide you
-              through the process quickly and hassle-free.
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+    <div class="backdrop"></div>
 
     <!-- Завдання: Модальне вікно повинно містити назву події, на яку відбувається реєстрація, та кнопку закриття -->
 <div class="modal" id="contactModal">
