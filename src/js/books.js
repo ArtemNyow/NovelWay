@@ -52,7 +52,14 @@ export async function initAllBooks() {
 
 export function renderNextCategoryBooks() {
   showBooksLoader();
-  const booksToRender = currentCategoryBooks.slice(currentRenderIndex, currentRenderIndex + 24);
+
+  const itemsPerPage = currentRenderIndex === 0 ? 24 : 4;
+
+  const booksToRender = currentCategoryBooks.slice(
+    currentRenderIndex,
+    currentRenderIndex + itemsPerPage
+  );
+
   incrementCurrentRenderIndex(booksToRender.length);
 
   if (currentRenderIndex === booksToRender.length) {
@@ -67,8 +74,10 @@ export function renderNextCategoryBooks() {
   } else {
     refs.showMore.classList.add('is-hidden');
   }
+
   hideBooksLoader();
 }
+
 
 initAllBooks();
 renderCategoriesOption();
