@@ -1,14 +1,14 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { refs } from './refs';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.footer-form');
-  const input = document.querySelector('.footer-input');
+  const { footerForm, footerInput } = refs;
 
-  form.addEventListener('submit', event => {
+  footerForm.addEventListener('submit', event => {
     event.preventDefault();
 
-    const email = input.value.trim();
+    const email = footerInput.value.trim();
 
     if (email === '') {
       iziToast.warning({
@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    form.reset();
+    footerForm.reset();
   });
 });
