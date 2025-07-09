@@ -43,7 +43,7 @@ export async function initAllBooks() {
 
     return allCurrentBooks;
   } catch (error) {
-    console.error("Помилка під час завантаження всіх книг:", error);
+    console.error("Error loading all books:", error);
   }
   finally {
     hideBooksLoader();
@@ -52,7 +52,7 @@ export async function initAllBooks() {
 
 export function renderNextCategoryBooks() {
   showBooksLoader();
-  const booksToRender = currentCategoryBooks.slice(currentRenderIndex, currentRenderIndex + 24);
+  const booksToRender = currentCategoryBooks.slice(currentRenderIndex, currentRenderIndex + 4);
   incrementCurrentRenderIndex(booksToRender.length);
 
   if (currentRenderIndex === booksToRender.length) {

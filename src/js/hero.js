@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation,Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -7,12 +7,16 @@ const prevBtn = document.querySelector('.swiper-button-prev');
 const nextBtn = document.querySelector('.swiper-button-next');
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation],
+  modules: [Navigation,Keyboard],
   slidesPerView: 1,
   loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
   on: {
     init: updateButtonsState,

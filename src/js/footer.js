@@ -12,14 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (email === '') {
       iziToast.warning({
-        title: 'Увага',
-        message: 'Поле email не може бути порожнім!',
+        title: 'Attention',
+        message: 'The email field cannot be empty!',
         position: 'topRight',
         timeout: 3000,
         backgroundColor: '#ffa000',
       });
       return;
     }
+    
+    iziToast.success({
+      title: 'Success',
+      message: 'Thank you for subscribing!',
+      position: 'topRight',
+      timeout: 3000,
+      backgroundColor: '#4caf50',
+    });
+    
 
     footerForm.reset();
   });
