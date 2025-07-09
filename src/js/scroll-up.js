@@ -1,36 +1,29 @@
-const scrollUpBtn = document.querySelector('.scroll-up');
+import { refs } from "./refs";
+
+
 
 window.addEventListener('scroll', () => {
   const windowWidth = window.innerWidth;
   let scrollTrigger;
 
   if (windowWidth < 768) {
-    scrollTrigger = 200; // мобільні — раніше зʼявляється
+    scrollTrigger = 200; 
   } else if (windowWidth < 1440) {
-    scrollTrigger = 300; // планшети
+    scrollTrigger = 300; 
   } else {
-    scrollTrigger = 500; // десктопи — пізніше
+    scrollTrigger = 500; 
   }
 
   if (window.scrollY > scrollTrigger) {
-    scrollUpBtn.classList.add('show');
+    refs.scrollUpBtn.classList.add('show');
   } else {
-    scrollUpBtn.classList.remove('show');
+    refs.scrollUpBtn.classList.remove('show');
   }
 });
 
 
 
-// window.addEventListener('scroll', () => {
-//   if (window.scrollY > 200) {
-//     scrollUpBtn.classList.add('show');
-//   } else {
-//     scrollUpBtn.classList.remove('show');
-//   }
-// });
-
-
-scrollUpBtn.addEventListener('click', () => {
+refs.scrollUpBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',

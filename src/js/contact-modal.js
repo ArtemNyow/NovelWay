@@ -1,5 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { refs } from './refs';
 
 function initContactModal() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +26,8 @@ function initContactModal() {
 
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    refs.scrollUpBtn.classList.remove('show');
+    
   }
 
   function clearFormErrors() {
@@ -101,6 +104,7 @@ function initContactModal() {
     document.body.style.overflow = 'auto';
     document.getElementById('contactForm').reset();
     clearFormErrors();
+    refs.scrollUpBtn.classList.add('show');
   }
 
   const modal = document.getElementById('contactModal');
@@ -114,10 +118,12 @@ function initContactModal() {
 
   modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
+    refs.scrollUpBtn.classList.add('show');
   });
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
+    refs.scrollUpBtn.classList.add('show');
   });
 
   closeBtn.addEventListener('click', closeModal);
