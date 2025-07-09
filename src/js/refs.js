@@ -19,4 +19,6 @@ export const refs = {
   closeMobileBtn: document.querySelector('.js-close-menu'),
 
   navLinks: document.querySelectorAll('.js-header-list-link'),
+
+  scrollUpBtn: document.querySelector('.scroll-up'),
 };

@@ -8,6 +8,7 @@ import { refs } from './refs';
 
 function onEscPress(e) {
   if (e.key === 'Escape') closeModal();
+  refs.scrollUpBtn.classList.add('show');
 }
 
 export function openModalBook(bookData) {
@@ -15,9 +16,10 @@ export function openModalBook(bookData) {
 
   refs.backdrop.classList.add('is-open-book-modal');
   document.body.classList.add('no-scroll');
-
+  refs.scrollUpBtn.classList.remove('show');
   new Accordion('.accordeon-container', {
     showMultiple: true,
+  
   });
 
   const inputSum = refs.backdrop.querySelector('.form-input-sum');
@@ -35,7 +37,7 @@ export function openModalBook(bookData) {
       inputSum.value = +inputSum.value - 1;
     } else {
       iziToast.error({
-        message: 'Введіть коректний формат',
+        message: 'Enter the correct format',
         position: 'topRight',
       });
       inputSum.value = 1;
@@ -48,7 +50,7 @@ export function openModalBook(bookData) {
       inputSum.value = +inputSum.value + 1;
     } else {
       iziToast.error({
-        message: 'Введіть коректний формат',
+        message: 'Enter the correct format',
         position: 'topRight',
       });
       inputSum.value = 1;
@@ -63,14 +65,14 @@ export function openModalBook(bookData) {
     number = Number(value);
     if (!value || isNaN(number) || number < 1) {
       iziToast.error({
-        message: 'Введіть коректний формат',
+        message: 'Enter the correct format',
         position: 'topRight',
       });
       inputSum.value = 1;
       return;
     } else {
       iziToast.success({
-        message: `Кількість обраних товарів: ${number}`,
+        message: `Number of selected products: ${number}`,
         position: 'topRight',
       });
     }
@@ -85,7 +87,7 @@ export function openModalBook(bookData) {
     number = Number(value);
     if (!value || isNaN(number) || number < 1) {
       iziToast.error({
-        message: 'Введіть коректний формат',
+        message: 'Enter the correct format',
         position: 'topRight',
       });
       inputSum.value = 1;
@@ -94,7 +96,7 @@ export function openModalBook(bookData) {
       return;
     } else {
       iziToast.success({
-        message: 'Дякуємо за покупку',
+        message: 'Thank you for your purchase.',
         position: 'topRight',
       });
     }
@@ -103,6 +105,7 @@ export function openModalBook(bookData) {
   closeBtn.addEventListener('click', closeModal);
   refs.backdrop.addEventListener('click', e => {
     if (e.target === refs.backdrop) closeModal();
+    refs.scrollUpBtn.classList.add('show');
   });
 
   document.addEventListener('keydown', onEscPress);
@@ -112,6 +115,6 @@ function closeModal() {
   refs.backdrop.classList.remove('is-open-book-modal');
   document.body.classList.remove('no-scroll');
   refs.backdrop.innerHTML = '';
-
+  refs.scrollUpBtn.classList.add('show');
   document.removeEventListener('keydown', onEscPress);
 }
