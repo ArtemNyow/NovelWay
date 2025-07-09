@@ -43,15 +43,9 @@ Booksy – це демонстраційна платформа, яка дозв
 
 ## 🌐 Демо
 
-🔗 [Переглянути живу сторінку](https://artemnyow.github.io/Booksy/)  
-🔗 [GitHub репозиторій](https://github.com/ArtemNyow/Booksy)
+🔗 [Переглянути живу сторінку](artemnyow.github.io/NovelWay/)  
+🔗 [GitHub репозиторій](https://github.com/ArtemNyow/NovelWay)
 
 ---
 
-## ⚙️ Як запустити локально
 
-```bash
-git clone https://github.com/ArtemNyow/Booksy.git
-cd Booksy
-npm install
-npm run dev
