@@ -310,6 +310,10 @@
 
   }
 
+  .books-desktop__btn_align {
+    width: 100%;
+  }
+
   .books-desktop__correct {
     display: flex;
   }
