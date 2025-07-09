@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination,Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 const eventsSwiper = new Swiper('.events-swiper', {
-  modules: [Navigation , Pagination],
+  modules: [Navigation , Pagination,Keyboard],
   slidesPerView: 1,
   loop: false,
   roundLengths: true,
@@ -16,6 +16,10 @@ const eventsSwiper = new Swiper('.events-swiper', {
   pagination: {
     el: '.events-swiper-pagination',
     clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
   
   breakpoints: {
