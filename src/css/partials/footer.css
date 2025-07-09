@@ -65,7 +65,7 @@
 
 .decor-line {
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 343px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 80px;
     margin-top: 80px;
@@ -89,6 +89,11 @@
 
     .footer-input {
         width: 221px;
+    }
+
+    .decor-line {
+        width: 343px;
+
     }
 }
 

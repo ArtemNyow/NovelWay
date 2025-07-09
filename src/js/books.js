@@ -43,7 +43,7 @@ export async function initAllBooks() {
 
     return allCurrentBooks;
   } catch (error) {
-    console.error("Помилка під час завантаження всіх книг:", error);
+    console.error("Error loading all books:", error);
   }
   finally {
     hideBooksLoader();
@@ -53,6 +53,7 @@ export async function initAllBooks() {
 export function renderNextCategoryBooks() {
   showBooksLoader();
 
+  // Якщо ще нічого не рендерили — беремо 24
   const itemsPerPage = currentRenderIndex === 0 ? 24 : 4;
 
   const booksToRender = currentCategoryBooks.slice(
